@@ -70,9 +70,9 @@ if __name__ == '__main__':
     # print(type(novel_list),"\n")
     #print(novel_list)
     for novel in novel_list[0:100]:
-        print("Downloading ",novel_title)
         novel_url = novel[0]
         novel_title = novel[1]
+        print("Downloading ", novel_title)
         spider = ScrapingNovel()
         spider.get_novel(novel_url,novel_title)
 
