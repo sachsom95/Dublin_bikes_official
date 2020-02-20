@@ -30,8 +30,6 @@ weather={}
 # >>>>>>>>>>>>>>TIME<<<<<<<<<<<<<<<<<<<<<<
 def time_stamp():
     """Return the current date time."""
-
-
     secondsSinceEpoch = time.time()
     timeObj = time.localtime(secondsSinceEpoch)
     time_str = '%d-%d-%d - %d:%d:%d' % (
@@ -56,8 +54,7 @@ def get_weather_by_latitude(lat = 53.34399,lon = -6.26719):
         weather['feels_like'] = response['main']['feels_like']
         weather['temp_min'] = response['main']['temp_min']
         weather['temp_max'] = response['main']['temp_max']
-        weather['wind'] = response['wind']['speed']
-        weather['speed'] = response['wind']['speed']
+        weather['wind_speed'] = response['wind']['speed']
     else:
         print("Could not get information")
 
@@ -81,8 +78,11 @@ def get_weather_by_city_id(id ='2964574' ):
         weather['feels_like'] = response['main']['feels_like']
         weather['temp_min'] = response['main']['temp_min']
         weather['temp_max'] = response['main']['temp_max']
-        weather['wind'] = response['wind']['speed']
-        weather['speed'] = response['wind']['speed']
+        weather['wind_speed'] = response['wind']['speed']
 
     else:
         print("Could not get information")
+
+
+def insert_data():
+    
