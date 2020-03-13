@@ -90,5 +90,5 @@ for i in station:
 
     mycursor.execute(query)
     mydb.commit()
-    print("Done executing query for {}".format(i))
 
+print("Done executing query for --> {} on {}".format(data['time'], data['date']))
