@@ -6,9 +6,6 @@ from weather import weather
 from datetime import timedelta
 from bikes import bikes
 
-
-# app = Flask(__name__,template_folder='user_manage/templates',
-#     static_folder='user_manage/static')
 app = Flask(__name__)
 #在初始化flask时, 需要制定默认的模板文件夹, 否则就默认是root下的templates
 
@@ -76,12 +73,6 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT '] = timedelta(seconds=5)
 #         db.session.add(s)
 #     db.session.commit()
 
-# @app.route('/')
-# def index():
-#     d = data_get()
-#     message = "hello flask flask flask"
-#
-#     return render_template('index.html', ms = message, d = data_get())
 
 if __name__ == '__main__':
     # db.drop_all()
