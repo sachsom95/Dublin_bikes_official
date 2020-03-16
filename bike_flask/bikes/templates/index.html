@@ -6,48 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
     <base href="/bikes/static/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <script src="assets/js/jquery.min.js"></script>
+
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+
+     <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChOgcySVgoWybwFWZ8KTmOC0XBDHkgdnY&callback=initMap">
+    </script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+
 
     <script type="text/javascript">
-        $(function() {
-            $("#btn").click(function() {
+// Initialize and add the map
+$(function() {
 
-            alert("6666");
+    $.fn.create_marker = function (lat, lng, map) {
+        var myLatlng = new google.maps.LatLng(lat,lng);
+        var mapOptions = {
+        zoom:10,
+        center: myLatlng
+}
 
-            });
+var marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Hello World!"
+});
+
+// To add the marker to the map, call setMap();
+marker.setMap(map);
+    };
+
+    $.ajax({
+        type: "GET",
+        url: "/data",
+        datatype: "json",
+        success: function (msg) {
+            var map_marker = JSON.parse(msg);
+
+            var center = new google.maps.LatLng(53.32,-6.21);
+        var loc = {
+        zoom:10,
+        center: center
+}
+            var map = new google.maps.Map(document.getElementById("MAP_DIV"), loc);
+            for (var i = 0; i < map_marker.length; i++) {
+                var lat = map_marker[i]['position']['lat'];
+                var lng = map_marker[i]['position']['lng'];
+                $.fn.create_marker(lat,lng, map);
+
+                {#markers.push(marker);#}
+            }
 
 
-        });
-    </script>
+
+        }
+
+
+    });
+
+
+
+
+
+
+});
+ </script>
 
 
 </head>
 
 <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>Dublin Bikes</span></div>
-                </a>
-                <hr class="sidebar-divider my-0">
-                <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
-            </div>
-        </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
@@ -76,15 +117,27 @@
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0">MAP</h6>
                                     <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
                                             <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <input type="text" name="test">
-                                    <input id="btn" type="button" name="button" value="submit">
-                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <div class="card-body" id="MAP_DIV" style="height: 403px;">jaja</div>
+                                
+                                
+                                
+                                
+                                
+                                
                             </div>
                         </div>
                         <div class="col-lg-5 col-xl-4">
@@ -92,52 +145,56 @@
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0">WEATHER</h6>
                                     <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
                                             <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
                                             <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Direct&quot;,&quot;Social&quot;,&quot;Referral&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#1cc88a&quot;,&quot;#36b9cc&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;50&quot;,&quot;30&quot;,&quot;15&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div>
-                                    <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Direct</span><span class="mr-2"><i class="fas fa-circle text-success"></i>&nbsp;Social</span><span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Refferal</span></div>
-                                </div>
+                                    <div
+                                        class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Direct</span><span class="mr-2"><i class="fas fa-circle text-success"></i>&nbsp;Social</span><span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Refferal</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-primary shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">Primary</p>
-                                            <p class="text-white-50 small m-0">I like pancake</p>
-                                        </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card text-white bg-primary shadow">
+                                    <div class="card-body">
+                                        <p class="m-0">Primary</p>
+                                        <p class="text-white-50 small m-0">I like pancake</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-success shadow">
-                                        <div class="card-body">
-                                            <p class="m-0">HAboa -lue</p>
-                                            <p class="text-white-50 small m-0">lalalla</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card text-white bg-success shadow">
+                                    <div class="card-body">
+                                        <p class="m-0">HAboa -lue</p>
+                                        <p class="text-white-50 small m-0">lalalla</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card text-white bg-info shadow"></div>
-                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card text-white bg-info shadow"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>fuck u</span></div>
-                </div>
-            </footer>
-        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
-
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>fuck u</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    
 </body>
+
+
 
 </html>
