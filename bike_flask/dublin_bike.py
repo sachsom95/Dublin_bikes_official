@@ -10,4 +10,3 @@ def data_get(url="https://api.jcdecaux.com/vls/v1/stations?contract=dublin&apiKe
     return json.loads(data)
 
 # print(data_get())
-# print(json.dumps(data_get()))
