@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="static/assets/css/styles.min.css">
 </head>
 
 <body id="page-top">
@@ -123,11 +123,48 @@
             </div>
         </footer>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <script src="static/assets/js/script.min.js"></script>
+    
+     <script>
+                        // Initialize and add the map
+                        function initMap() {
+                          // The location of Uluru
+                          var uluru = {lat: 53.3488, lng: -6.281637};
+
+                          // The map, centered at Uluru
+                          var map = new google.maps.Map(
+                              document.getElementById('MAP_DIV'), {zoom: 13, center: uluru});
+                          // The marker, positioned at Uluru
+                          var marker = new google.maps.Marker({position: uluru, map: map});
+                            {% for i in realtime_data %}
+
+                                var near1 = {lat: {{ i[4] }}, lng: {{ i[5] }} };
+                                var marker1 = new google.maps.Marker({position:near1,map: map});
+                                var infowindow = new google.maps.InfoWindow();
+
+
+                        google.maps.event.addListener(marker1, 'click', function () {
+                            {#infowindow.setContent('Time : {{ i[0] }} , Number : {{ i[1] }} , Name : {{ i[2] }}, Address : {{ i[3] }}, bike_stands : {{ i[8] }},  available_bike_stands :{{ i[9] }}, Available_bikes : {{ i[10] }} Station_status : {{ i[11] }}');#}
+                            infowindow.setContent("<div><ul><li>Time : {{ i[0] }}</li><li>Number : {{ i[1] }}</li><li>Name : {{ i[2] }}</li><li>Address : {{ i[3] }}</li><li>bike_stands : {{ i[8] }}</li><li>available_bike_stands :{{ i[9] }}</li><li>Available_bikes : {{ i[10] }}</li><li>Station_status : {{ i[11] }}</li><ul></div>");
+
+                            infowindow.setPosition(new google.maps.LatLng({{ i[4] }}, {{ i[5] }}));
+                            infowindow.open(map);
+                        });
+
+                            {% endfor %}
+                        marker.setMap(map);
+
+                        }
+                            </script>
+                            <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkgvza6MxMtmD20dkYpC7Vu7dp0Etg9BI&callback=initMap">
+                            </script>
+    
+    
 </body>
 
 </html>
