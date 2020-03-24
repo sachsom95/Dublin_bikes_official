@@ -1,11 +1,9 @@
 # AUTHOR: SACHIN SOMAN
 
-import time
-
-import mysql.connector
 # >>>>>>>>>>>>>>LIBRARIES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 import requests
-
+import mysql.connector
+import time
 #-----------------------------------------------------
 
 # >>>>>>>>>>>>>SQL CONNECTION CONFIG<<<<<<<<<<<<<<<<<<
@@ -97,7 +95,7 @@ def get_weather_by_city_id(id ='2964574' ):
 latitude = 53.34399
 longtitude =-6.26719
 get_weather_by_latitude(lat=53.34399, lon=-6.26719)
-query = "UPDATE bikes.weather SET date = '{}',time='{}', temp = {}, feels_like = {} ,temp_min = {}, temp_max = {}, wind_speed = {},icon = '{}', lat = {}, lon = {} WHERE lat = {}".format(weather['date'],weather['time'],weather['temp'],weather['feels_like'],weather['temp_min'],weather['temp_max'],weather['wind_speed'],weather['icon'],latitude,longtitude,latitude)
+query = "UPDATE bikes.weather SET date = '{}',time='{}', temp = {}, feels_like = {} ,temp_min = {}, temp_max = {}, wind_speed = {},icon = '{}', lat = {}, lon = {}, description = {} WHERE lat = {}".format(weather['date'],weather['time'],weather['temp'],weather['feels_like'],weather['temp_min'],weather['temp_max'],weather['wind_speed'],weather['icon'],latitude,longtitude,latitude,weather['description'])
 print(query)
 
 mycursor.execute(query)
