@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/styles.min.css">
+</head>
+
+<body id="page-top">
+    <div></div>
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row" style="margin-top: 17px;margin-bottom: 16px;">
+                        <div class="col-lg-1">
+                            <div><i class="material-icons pulse animated infinite" style="padding: 7px;">directions_bike</i></div>
+                        </div>
+                        <div class="col" style="padding: 17px 0px 0px 0px;margin: 0px;margin-left: 12px;">
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4" style="padding: 10px 0px 0px 0px;">
+                                <h3 class="text-dark mb-0">DUBLIN BIKES DASHBOARD</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Bikes available</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>STATION</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-info">STATUS</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-warning">PAY FACILITY AVAILABLE</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">MAP</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="MAP_DIV" style="height: 440px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">WEATHER FOR DUBLIN</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="weather_card" style="height: 438px;">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center"><img class="pulse animated infinite" id="weather_icon" src="assets/img/10d@2x.png" style="width: 139px;height: 141px;margin-top: -8px;margin-right: 18px;">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2" style="height: 70px;">
+                                                    <div class="text-dark font-weight-bold h5 mb-0" id="temperature" style="height: 71px;margin-top: 17px;background-color: rgba(255,255,255,0);"><span style="height: 0px;background-color: rgba(203,41,41,0);">7.04℃</span></div>
+                                                </div>
+                                            </div>
+                                            <p style="font-size: 19px;color: rgb(137,139,150);" id="description"><strong>DRY RAIN</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card shadow py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>FEELS LIKE</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="feels_like"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>max temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0 " id="max_temp"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>min temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="min_temp"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>wind speed</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="wind_speed"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center small mt-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span><strong>Made For Dublin&nbsp;</strong><i class="fa fa-heart"></i><strong>&nbsp;</strong></span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="static/assets/js/script.min.js"></script>
+      <script>
+
+                        function initMap() {
+                          var uluru = {lat: 53.3488, lng: -6.281637};
+
+                          var map = new google.maps.Map(
+                              document.getElementById('MAP_DIV'), {zoom: 13, center: uluru});
+                          // The marker, positioned at Uluru
+
+                          var marker = new google.maps.Marker({position: uluru, map: map});
+
+
+
+
+                        }
+
+                            </script>
+                            <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkgvza6MxMtmD20dkYpC7Vu7dp0Etg9BI&callback=initMap">
+                            </script>
+
+
+  <script>
+              document.getElementById("temperature").innerHTML = {{realtime_data[2]}}+"℃";
+
+              document.getElementById("feels_like").innerHTML = {{realtime_data[3]}}+" ℃";
+
+              document.getElementById("max_temp").innerHTML = {{realtime_data[5]}}+"℃";
+
+              document.getElementById("min_temp").innerHTML = {{realtime_data[4]}};
+
+              document.getElementById("wind_speed").innerHTML = {{realtime_data[6]}}+"℃";
+
+              document.getElementById("description").innerHTML = "{{realtime_data[10]}}";
+
+              var url = "http://openweathermap.org/img/wn/{{realtime_data[7]}}@2x.png"
+                                            console.log(url)
+                                            document.getElementById("weather_icon").src = url;
+
+
+  </script>
+
+
+</body>
+
+</html>
