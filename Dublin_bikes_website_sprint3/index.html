@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dublin Bikes</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body id="page-top">
+    <div></div>
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row" style="margin-top: 17px;margin-bottom: 16px;">
+                        <div class="col-lg-1 mb-0" id="top_column">
+                            <div><i class="material-icons pulse animated infinite" id="bike_icon" style="padding: 7px;">directions_bike</i></div>
+                        </div>
+                        <div class="col" style="padding: 17px 0px 0px 0px;margin: 0px;margin-left: 12px;">
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4" style="padding: 10px 0px 0px 0px;">
+                                <h3 class="text-dark mb-0" id="dublin_bike_dashboard_txt">DUBLIN BIKES DASHBOARD</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4" id="container_bikes_available">
+                            <div class="card shadow border-left-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Bikes available</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4" id="container_station" style="margin-bottom: 0px;">
+                            <div class="card shadow border-left-success mb-4" id="container_station" style="height: 102px;">
+                                <div class="card-body" style="height: 84px;">
+                                    <div class="row align-items-center no-gutters" style="margin-top: 4px;">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>STATION</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3" id="container_status">
+                            <div class="card shadow border-left-info py-2" style="margin-bottom: 28px;">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-info">STATUS</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3" id="container_pay_facility_available" style="margin-bottom: 13px;">
+                            <div class="card shadow border-left-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-warning">PAY FACILITY AVAILABLE</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">MAP</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="MAP_DIV" style="height: 440px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-4" id="weather_column">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">WEATHER</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="weather_card" style="/*height: 438px;*/">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center"><img class="pulse animated infinite" id="weather_icon" src="assets/img/10d@2x.png" style="width: 139px;height: 141px;margin-top: -8px;margin-right: 18px;">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2" style="height: 70px;">
+                                                    <div class="text-dark font-weight-bold h5 mb-0" id="temperature" style="height: 71px;margin-top: 17px;background-color: rgba(255,255,255,0);"><span style="height: 0px;background-color: rgba(203,41,41,0);">7.04℃</span></div>
+                                                </div>
+                                            </div>
+                                            <p style="font-size: 19px;color: rgb(137,139,150);"><strong>DRY RAIN</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card shadow py-2">
+                                                <div class="card-body" id="weather_info_card">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>FEELS LIKE</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>max temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>min temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>wind speed</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center small mt-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-3">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Travel Later</p>
+                        </div>
+                        <div class="card-body" id="travel_later_container">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-row">
+                                            <div class="col-xl-12" id="starting_bike_station_dropdown_container"><label for="username"><strong>Starting Bike Station</strong></label>
+                                                <div class="dropdown" style="height: 65px;"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: rgb(255,255,255);color: rgb(78,115,223);padding: 6px;margin-bottom: 12px;margin-top: 12px;width: 100%;">Starting Point&nbsp;</button>
+                                                    <div
+                                                        class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col" id="destination_bike_station_container"><label for="email"><strong>Destination Bike Station</strong></label>
+                                            <div class="dropdown" style="height: 80px;"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: rgb(255,255,255);color: rgb(78,115,223);margin-top: 12px;margin-bottom: 12px;width: 100%;">Destination&nbsp;</button>
+                                                <div
+                                                    class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col" id="date_and_time_of_travel_container"><label for="email"><strong>Date and Time of Travel</strong><br></label><input class="form-control" type="datetime-local" style="margin: 0px;height: 50px;"></div>
+                                </div>
+                                <div class="form-row" style="height: 70px;">
+                                    <div class="col" style="height: 72px;padding: 0px;padding-top: 8px;"><a class="btn btn-primary" role="button" id="submit_button" style="width: 100%;margin-top: 8px;margin-bottom: 14px;"><span class="text-center text-white-50 icon" style="height: -3px;margin-top: -2px;background-color: rgb(78,115,223);"><i class="material-icons" id="submit_bike_icon" style="margin-right: 5px;margin-top: 0px;height: 30px;padding-top: 0px;">directions_bike</i></span><span class="text-white text" style="margin: 8px;padding-top: 0px;">Submit</span></a></div>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary m-0 font-weight-bold">No of Expected Bikes Available at Starting Station</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-center m-0" style="font-size: 60px;">24</p>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary m-0 font-weight-bold">Number of Free Stands Expected at Destination</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-center m-0" style="font-size: 60px;">12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">Start Location data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">End Destination data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4512&quot;,&quot;5312&quot;,&quot;6251&quot;,&quot;7841&quot;,&quot;9821&quot;,&quot;14984&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span><strong>Made For Dublin with&nbsp;</strong><i class="fa fa-heart"></i><strong>&nbsp;</strong></span></div>
+        </div>
+    </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
