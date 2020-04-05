@@ -1,10 +1,12 @@
+<!--Author Sachin. Date of revision :April 5-->
+<!--comments added where we do major trmplate generations using js-->
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dublin Bikes</title>
+    <title>Dashboard - Dublin Bikes</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -16,6 +18,8 @@
 </head>
 
 <body id="page-top">
+    <div></div>
+    <div></div>
     <div></div>
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
@@ -149,6 +153,11 @@
                                         </div>
                                     </div>
                                     <div class="text-center small mt-4"></div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="text-center" style="font-size: 15px;"><em>Click on Map marker to get station info or go down and select orgin,destination and time to get approximate number of bikes available.</em></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,26 +171,135 @@
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="form-row">
-                                            <div class="col-xl-12" id="starting_bike_station_dropdown_container"><label for="username"><strong>Starting Bike Station</strong></label>
-                                                <div class="dropdown" style="height: 65px;"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: rgb(255,255,255);color: rgb(78,115,223);padding: 6px;margin-bottom: 12px;margin-top: 12px;width: 100%;">Starting Point&nbsp;</button>
-                                                    <div
-                                                        class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                                           
+                                           
+<!--                                        START POINT FORM   -->
+                                           
+                                           
+                                           
+                                           
+                                            <div class="col-xl-12" id="starting_bike_station_dropdown_container" style="margin-bottom: 4px;"><label for="username" style="margin-bottom: 10px;"><strong>Starting Bike Station</strong></label>
+                                            
+                                            <select class="bg-white border rounded border-primary shadow-none custom-select"  style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 19px;" id = "start_point_template">
+                                            
+                                            IMPORTANT MARKER for starting point->
+                                           
+                                            <option value="" selected="" hidden>Starting Point</option>
+                                            
+<!--
+                                            DATA UPDATED VIA JAVASCRIP >>>>> id = "start_point_template"<<<<
+                                            <option value="12" >This is item 11</option>
+                                            <option value="13">This is item 2</option>
+                                            <option value="14">This is item 3</option>
+                                            
+                                            <option value="SMITHFIELD NORTH"> "SMITHFIELD NORTH"</option>
+-->
+
+                                            </select>   
+                                             
+                                        
                                             </div>
+                                            
+                                            
+                                            
+<!--               DESTINATIN SELECT FORM                             -->
+                                            
                                         </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col" id="destination_bike_station_container"><label for="email"><strong>Destination Bike Station</strong></label>
-                                            <div class="dropdown" style="height: 80px;"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: rgb(255,255,255);color: rgb(78,115,223);margin-top: 12px;margin-bottom: 12px;width: 100%;">Destination&nbsp;</button>
+                                        <div class="form-row">
+                                            <div class="col" id="destination_bike_station_container" style="margin-bottom: 7px;">
+                                            <label ><strong>Destination Bike Station</strong></label>
+                                            
+                                            <select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id = "destination_template">
+<!--                      IMPORTANT MARKER FOR DESTINATION                      -->
+                                           
+                                            <option value="" selected="" hidden>Destination</option>
+<!------------------>
+                                            
+<!--                                       JS TEMPLATE MUST GENERTAE HERE     -->
+<!--
+                                            <option value="13">This is item 2</option>
+                                            <option value="14">This is item 3</option>
+-->
+                                            
+                                            </select></div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+<!--                                        DATE AND TIME TRAVEL FORM-->
+                                        <div class="form-row">
+                                            <div class="col" id="date_and_time_of_travel_container" style="margin-top: 8px;"><label><strong>Date and Time of Travel</strong><br></label>
+                                               
+<!--                                               DATE MODIFICATION WILL BE DONE HERE-->
+                                                <div class="form-row">
+                                                    <div class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="date_dropdown" >
+                                                    
+                                                    
+                                                    
+                                                    
+<!--                                                    This option is what we use as placeholder for dropdown dont remove it -->
+                                                    <option value="" selected="" hidden>Date of travel </option>
+                                                    
+<!--                                                   We need to insert the dates here -->
+                                                    <option value="1">DAY 1</option><option value="2" selected="">DAY 2</option><option value="3">DAY 3</option><option value="4">DAY 4</option></select>
+                                                                
+                                                    </div>
+                                                    
+                                                    
+                                                    
+<!--                                                    Container for Hour of travel-->
+                                                    <div
+                                                        class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="hour_dropdown">
+                                                        
+<!--                                                        The place holder for HOUR OF TRAVEL -->
+<!--
+                                                        <option value="" selected="" hidden>Hour of travel </option>
+                                                        
+                                                        <option value="undefined">Starting Point</option><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option>
+                                                        
+                                                        
+-->
+                                                        
+                                                        
+                                                        </select></div>
+                                                        
+                                                        
+                                                        
+<!--                                                        Container for minuite of travel-->
+                                                        
+                                                        
+                                                        
                                                 <div
-                                                    class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                                                    class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="min_dropdown">
+                                                    
+<!--                                   SINCE WE HAVE ONLY 4 options we might as well hard code it                  -->
+                                                    <option value="" selected="" hidden>Minutes</option>
+                                                    
+                                                    
+                                                    <option value="00" >00</option>
+                                                    
+                                                    <option value="15">15</option>
+                                                    
+                                                    <option value="30">30</option>
+                                                    
+                                                    <option value="45">45</option>
+                                                    
+                                                    </select>
+                                                    </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col" id="date_and_time_of_travel_container"><label for="email"><strong>Date and Time of Travel</strong><br></label><input class="form-control" type="datetime-local" style="margin: 0px;height: 50px;"></div>
+                                    
+<!--                                    SUBMIT BUTTON-->
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                 </div>
                                 <div class="form-row" style="height: 70px;">
-                                    <div class="col" style="height: 72px;padding: 0px;padding-top: 8px;"><a class="btn btn-primary" role="button" id="submit_button" style="width: 100%;margin-top: 8px;margin-bottom: 14px;"><span class="text-center text-white-50 icon" style="height: -3px;margin-top: -2px;background-color: rgb(78,115,223);"><i class="material-icons" id="submit_bike_icon" style="margin-right: 5px;margin-top: 0px;height: 30px;padding-top: 0px;">directions_bike</i></span><span class="text-white text" style="margin: 8px;padding-top: 0px;">Submit</span></a></div>
+                                    <div class="col" style="height: 72px;padding: 0px;padding-top: 8px;margin-top: 0px;"><a onclick="get_data()" class="btn btn-primary" role="button" id="submit_button" style="width: 100%;margin-top: 8px;margin-bottom: 14px;"><span class="text-center text-white-50 icon" style="height: -3px;margin-top: -2px;background-color: rgb(78,115,223);"><i class="material-icons" id="submit_bike_icon" style="margin-right: 5px;margin-top: 0px;height: 30px;padding-top: 0px;">directions_bike</i></span><span class="text-white text" style="margin: 8px;padding-top: 0px;">Submit</span></a></div>
                                 </div>
                         </div>
                         <div class="col-md-6">
@@ -204,7 +322,7 @@
                         </div>
                     </div>
                     </form>
-                    <div class="row">
+                    <div class="row" style="margin-top: 14px;">
                         <div class="col-md-6">
                             <div class="card mb-4">
                                 <div class="card-header py-3">
@@ -234,6 +352,13 @@
         <div class="container my-auto">
             <div class="text-center my-auto copyright"><span><strong>Made For Dublin with&nbsp;</strong><i class="fa fa-heart"></i><strong>&nbsp;</strong></span></div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;margin-right: 0px;margin-left: 0px;font-size: 12px;">FreddieNIU</a></div>
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;margin-right: 0px;font-size: 12px;">sachsom95</a></div>
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;font-size: 12px;">Hao - Bo -Liu</a></div>
+            </div>
+        </div>
     </footer>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
@@ -241,6 +366,14 @@
     <script src="assets/js/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/script.min.js"></script>
+    
+    
+<!--    get_data_script here-->
+    
+        <script src="assets/js/extract_data.js"></script>
+        <script src="assets/js/generator_script.js"></script>
+        
+    
 </body>
 
 </html>
