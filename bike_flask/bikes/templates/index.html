@@ -32,9 +32,11 @@
         // Initialize and add the map
         $(function () {
 
-            $.fn.create_marker = function (lat, lng, map) {
+            $.fn.create_marker = function (lat, lng, name, map) {
+
                 var image = {
                     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png',
+                    {#url:'http://image.flaticon.com/icons/svg/252/252025.svg',#}
                     // This marker is 20 pixels wide by 32 pixels high.
                     size: new google.maps.Size(30, 32),
                     // The origin for this image is (0, 0).
@@ -47,7 +49,16 @@
                 var marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    icon: image
+                    icon: image,
+                    title: name
+                    {#label: {#}
+                        {#text: name,#}
+                    {#    color: "#eb3a44",#}
+                    {#    fontSize: "16px",#}
+                    {#    fontWeight: "bold"#}
+
+
+
                 });
                 // To add the marker to the map, call setMap();
                 marker.setMap(map);
@@ -74,24 +85,29 @@
                 var loc = {
                     zoom: 13,
                     center: center
-                }
+                };
 
                 var map = new google.maps.Map(document.getElementById("MAP_DIV"), loc);
 
                 for (var i = 0; i < map_marker.length; i++) {
-                    var lat = map_marker[i]['position']['lat'];
-                    var lng = map_marker[i]['position']['lng'];
-                    {#var name = map_marker[i]['name'];#}
-                    var marker = $.fn.create_marker(lat, lng, map);
-
+                    var lat = map_marker[i]['latitude'];
+                    var lng = map_marker[i]['longitude'];
+                    var name = map_marker[i]['name'];
+                    var marker = $.fn.create_marker(lat, lng, name ,map);
+                    {#var infowindow = new google.maps.InfoWindow({#}
+                    {#        content: name#}
+                    {#        });#}
                     //zoom in when mouse over the marker
                     marker.addListener('mouseover', function () {
                         /*setTimeout(function () {
 
                         }, 1000);*/
+                        {#infowindow.open(map,this);#}
                         map.setZoom(16);
                         map.setCenter(this.position);
+
                     });
+
                     markers.push(marker);  /* store all the marker  */
                 }
             }
@@ -104,27 +120,30 @@
                     data: {"lat": lat, "lng": lng},
                     datatype: "json",
                     success: function (msg) {
-                        var bike_available = JSON.parse(msg);
-                        var num = bike_available['available_bikes'];
-                        $("#bikes_avail span").html(num);
-
+                        var bike_stands = JSON.parse(msg);
+                        var avail_bikes = bike_stands['available_bikes'];
+                        var avail_stands = bike_stands['available_bike_stands'];
+                        var stands = bike_stands['bike_stands'];
+                        $("#bikes_avail span").html(avail_bikes);
+                        $("#stands_avail span").html(avail_stands);
+                        $("#stands span").html(stands);
                     }
                 });
             }// get_station_info
-            function add_marker_click(){
-            for (var j = 0; j < markers.length; j++) {
-                var marker = markers[j];
-                marker.addListener('click', function () {
 
-                    /*
-                    focus on the marker when user clicks
-                     */
-                    lat = this.position.lat();
-                    lng = this.position.lng();
-                    console.log(this.position.lat() + " " + this.position.lng());
-                    get_station_info(lat,lng);
-                });
-            }
+            function add_marker_click() {
+                for (var j = 0; j < markers.length; j++) {
+                    var marker = markers[j];
+                    marker.addListener('click', function () {
+                        /*
+                        focus on the marker when user clicks
+                         */
+                        lat = this.position.lat();
+                        lng = this.position.lng();
+                        console.log(this.position.lat() + " " + this.position.lng());
+                        get_station_info(lat, lng);
+                    });
+                }
             }
 
 
@@ -160,6 +179,16 @@
                                         <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Bikes available</span>
                                         </div>
                                         <div id="bikes_avail" class="text-dark font-weight-bold h5 mb-0"><span>0</span>
+                                        </div>
+
+                                         <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Stands available</span>
+                                        </div>
+                                        <div id="stands_avail" class="text-dark font-weight-bold h5 mb-0"><span>0</span>
+                                        </div>
+
+                                        <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Bikes Stands</span>
+                                        </div>
+                                        <div id="stands" class="text-dark font-weight-bold h5 mb-0"><span>0</span>
                                         </div>
                                     </div>
                                 </div>
