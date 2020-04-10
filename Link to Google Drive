@@ -1,0 +1,8 @@
+stands prediction model: (>300MB)
+https://drive.google.com/open?id=17BbHF3Q4itnQgFsjwvDbFh9QiRnq7mSZ
+
+bike preidiction model:  (~30MB)
+https://drive.google.com/open?id=1IC1dL164_dzUld63TjHRXk5ihzVzh_rU
+
+
+These two models are loaded in ML.py file. So, make sure these models are in the same folder with ML.py.
