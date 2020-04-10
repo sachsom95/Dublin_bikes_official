@@ -1,0 +1,499 @@
+<!--Author Sachin. Date of revision :April 5-->
+<!--comments added where we do major trmplate generations using js-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Dublin Bikes</title>
+
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.min.css">
+    <link rel="stylesheet" href="/static/assets/css/addition.css">
+
+</head>
+
+<body id="page-top">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row" style="margin-top: 17px;margin-bottom: 16px;">
+                        <div class="col-lg-1 mb-0" id="top_column">
+                            <div><i class="material-icons pulse animated infinite" id="bike_icon" style="padding: 7px;">directions_bike</i></div>
+                        </div>
+                        <div class="col" style="padding: 17px 0px 0px 0px;margin: 0px;margin-left: 12px;">
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4" style="padding: 10px 0px 0px 0px;">
+                                <h3 class="text-dark mb-0" id="dublin_bike_dashboard_txt">DUBLIN BIKES DASHBOARD</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4" id="container_bikes_available">
+                            <div class="card shadow border-left-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Bikes available</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="bike_available">0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4" id="container_station" style="margin-bottom: 0px;">
+                            <div class="card shadow border-left-success mb-4" id="container_station" style="height: 102px;">
+                                <div class="card-body" style="height: 84px;">
+                                    <div class="row align-items-center no-gutters" style="margin-top: 4px;">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>STATION</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="station">0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3" id="container_status">
+                            <div class="card shadow border-left-info py-2" style="margin-bottom: 28px;">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-info">STATUS</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="status">0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3" id="container_pay_facility_available" style="margin-bottom: 13px;">
+                            <div class="card shadow border-left-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span class="text-warning">Stands Available</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="stands">0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">MAP</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="MAP_DIV" style="height: 440px;"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-4" id="weather_column">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">WEATHER</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                            role="menu">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="weather_card" style="/*height: 438px;*/">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center"><img class="pulse animated infinite" id="weather_icon" src="static/assets/img/10d@2x.png" style="width: 139px;height: 141px;margin-top: -8px;margin-right: 18px;">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2" style="height: 70px;">
+                                                    <div class="text-dark font-weight-bold h5 mb-0" id="temperature" style="height: 71px;margin-top: 17px;background-color: rgba(255,255,255,0);"><span style="height: 0px;background-color: rgba(203,41,41,0);">7.04℃</span></div>
+                                                </div>
+                                            </div>
+                                            <p style="font-size: 19px;color: rgb(137,139,150);" id="description"><strong>DRY RAIN</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card shadow py-2">
+                                                <div class="card-body" id="weather_info_card">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>FEELS LIKE</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="feels_like"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>max temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="max_temp"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>min temperature</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="min_temp"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>wind speed</span></div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0" id="wind_speed"><span>0</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center small mt-4"></div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="text-center" style="font-size: 15px;"><em>Click on Map marker to get station info or go down and select orgin,destination and time to get approximate number of bikes available.</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-3">
+                        <div class="card-header py-3">
+                            <div class="text-primary m-0 font-weight-bold">Travel Later<span id="weather_warning"></span></div>
+                        </div>
+                        <div class="card-body" id="travel_later_container">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-row">
+                                           
+                                           
+<!--                                        START POINT FORM   -->
+                                           
+                                           
+                                           
+                                           
+                                            <div class="col-xl-12" id="starting_bike_station_dropdown_container" style="margin-bottom: 4px;"><label for="username" style="margin-bottom: 10px;"><strong>Starting Bike Station</strong></label>
+                                            
+                                            <select class="bg-white border rounded border-primary shadow-none custom-select"  style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 19px;" id = "start_point_template">
+                                            
+{#                                            IMPORTANT MARKER for starting point->#}
+                                           
+                                            <option value="" selected="" hidden>Starting Point</option>
+                                            
+<!--
+                                            DATA UPDATED VIA JAVASCRIP >>>>> id = "start_point_template"<<<<
+                                            <option value="12" >This is item 11</option>
+                                            <option value="13">This is item 2</option>
+                                            <option value="14">This is item 3</option>
+                                            
+                                            <option value="SMITHFIELD NORTH"> "SMITHFIELD NORTH"</option>
+-->
+                                            </select>
+                                            </div>
+                                            
+                                            
+                                            
+<!--               DESTINATIN SELECT FORM                             -->
+                                            
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col" id="destination_bike_station_container" style="margin-bottom: 7px;">
+                                            <label ><strong>Destination Bike Station</strong></label>
+                                            
+                                            <select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id = "destination_template">
+<!--                      IMPORTANT MARKER FOR DESTINATION                      -->
+                                           
+                                            <option value="" selected="" hidden>Destination</option>
+<!------------------>
+                                            
+<!--                                       JS TEMPLATE MUST GENERTAE HERE     -->
+<!--
+                                            <option value="13">This is item 2</option>
+                                            <option value="14">This is item 3</option>
+-->
+
+                                            </select></div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+<!--                                        DATE AND TIME TRAVEL FORM-->
+                                        <div class="form-row">
+                                            <div class="col" id="date_and_time_of_travel_container" style="margin-top: 8px;"><label><strong>Date and Time of Travel</strong><br></label>
+                                               
+<!--                                               DATE MODIFICATION WILL BE DONE HERE-->
+                                                <div class="form-row">
+                                                    <div class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="date_dropdown" >
+                                                    
+                                                    
+                                                    
+                                                    
+<!--                                                    This option is what we use as placeholder for dropdown dont remove it -->
+                                                    <option value="" selected="" hidden>Date of travel </option>
+                                                    
+<!--                                                   We need to insert the dates here -->
+                                                        {% for i in date_array %}
+                                                    <option value="{{ i }}">{{ i }}</option>
+{#                                                        <option value="2" selected="">{{ date_array[1] }}</option>#}
+{#                                                        <option value="3">DAY 3</option>#}
+{#                                                        <option value="4">DAY 4</option>#}
+                                                        {% endfor %}
+                                                    </select>
+                                                                
+                                                    </div>
+                                                    
+                                                    
+                                                    
+<!--                                                    Container for Hour of travel-->
+                                                    <div
+                                                        class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="hour_dropdown">
+                                                        
+<!--                                                        The place holder for HOUR OF TRAVEL -->
+<!--
+                                                        <option value="" selected="" hidden>Hour of travel </option>
+                                                        
+                                                        <option value="undefined">Starting Point</option><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option>
+                                                        
+                                                        
+-->
+                                                        
+                                                        
+                                                        </select></div>
+                                                        
+                                                        
+                                                        
+<!--                                                        Container for minuite of travel-->
+                                                        
+                                                        
+                                                        
+                                                <div
+                                                    class="col-md-4"><select class="bg-white border rounded border-primary shadow-none custom-select" style="background-color: rgba(244,3,3,0);margin-top: 5px;margin-bottom: 10px;" id="min_dropdown">
+                                                    
+<!--                                   SINCE WE HAVE ONLY 4 options we might as well hard code it                  -->
+                                                    <option value="" selected="" hidden>Minutes</option>
+                                                    
+                                                    
+                                                    <option value="00" >00</option>
+                                                    
+                                                    <option value="15">15</option>
+                                                    
+                                                    <option value="30">30</option>
+                                                    
+                                                    <option value="45">45</option>
+                                                    
+                                                    </select>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    
+<!--                                    SUBMIT BUTTON-->
+                                    
+
+                                </div>
+                                <div class="form-row" style="height: 70px;">
+                                    <div class="col" style="height: 72px;padding: 0px;padding-top: 8px;margin-top: 0px;"><a id="submit_button" class="btn btn-primary" role="button"  style="width: 100%;margin-top: 8px;margin-bottom: 14px;"><span class="text-center text-white-50 icon" style="height: -3px;margin-top: -2px;background-color: rgb(78,115,223);"><i class="material-icons" id="submit_bike_icon" style="margin-right: 5px;margin-top: 0px;height: 30px;padding-top: 0px;">directions_bike</i></span><span class="text-white text" style="margin: 8px;padding-top: 0px;">Submit</span></a></div>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary m-0 font-weight-bold">No of Expected Bikes Available at<p id="start_station">Starting Station</p></h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-center m-0" style="font-size: 50px;" id="predict_bike"></p>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary m-0 font-weight-bold">Number of Free Stands Expected at <p id="end_station">Destination</p></h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-center m-0" style="font-size: 50px;" id = "predict_stands"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                        <!--start station daily data/bikes line-chart-->
+                    <div class="row" style="margin-top: 14px;">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">Start Location Daily Data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" id="line_chart"><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Bikes&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;10&quot;,&quot;11&quot;,&quot;18&quot;,&quot;22&quot;,&quot;40&quot;,&quot;5&quot;,&quot;1&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--destination station daily data/stands bar-chart-->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">Destination Daily Data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" id="bar_chart"><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;Julye&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Stands&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;30&quot;,&quot;40&quot;,&quot;20&quot;,&quot;40&quot;,&quot;25&quot;,&quot;40&quot;,&quot;30&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!--start station hourly data/bikes line-chart-->
+                        <div class="row" style="margin-top: 14px;">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">Start Location Hourly Data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" id="line_chart1"><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Bikes&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;10&quot;,&quot;11&quot;,&quot;18&quot;,&quot;22&quot;,&quot;40&quot;,&quot;5&quot;,&quot;1&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                            <!--destination station hourly data/stands line-chart-->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0">Destination Hourly Data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" id="bar_chart1"><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;Julye&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Stand&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4512&quot;,&quot;5312&quot;,&quot;6251&quot;,&quot;7841&quot;,&quot;9821&quot;,&quot;14984&quot;,&quot;1234&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span><strong>Made For Dublin with&nbsp;</strong><i class="fa fa-heart"></i><strong>&nbsp;</strong></span></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;margin-right: 0px;margin-left: 0px;font-size: 12px;">FreddieNIU</a></div>
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;margin-right: 0px;font-size: 12px;">sachsom95</a></div>
+                <div class="col-md-4 text-center"><a class="text-muted" href="#" style="margin: 0px;margin-top: 0px;height: 0px;padding: 0px;font-size: 12px;">Hao - Bo -Liu</a></div>
+            </div>
+        </div>
+    </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+   <div id="currentLat">coor1</div>
+   <div id="currentLon">coor2</div>
+
+
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/static/assets/js/script.min.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkgvza6MxMtmD20dkYpC7Vu7dp0Etg9BI&callback=initMap&libraries=geometry">
+    </script>
+    
+<!--    get_data_script here-->
+        <script src="/static/assets/js/extract_data.js"></script>
+
+        <script src="/static/assets/js/generator_script.js"></script>
+    <!-- get user location -->
+        <script src="/static/assets/js/get_user_location.js"></script>
+
+        <script>
+              document.getElementById("temperature").innerHTML = {{realtime_data[0][13]}}+"℃";
+
+              document.getElementById("feels_like").innerHTML = {{realtime_data[0][14]}}+" ℃";
+
+              document.getElementById("max_temp").innerHTML = {{realtime_data[0][16]}}+"℃";
+
+              document.getElementById("min_temp").innerHTML = {{realtime_data[0][15]}};
+
+              document.getElementById("wind_speed").innerHTML = {{realtime_data[0][17]}}+"℃";
+
+              document.getElementById("description").innerHTML = "{{realtime_data[0][19]}}";
+
+              /*
+              all stations data
+               */
+              var stations = JSON.parse({{ stations| tojson | safe  }});
+
+              var url = "http://openweathermap.org/img/wn/10d@2x.png";
+                console.log(url);
+              document.getElementById("weather_icon").src = url;
+
+     </script>
+
+    <script type="text/javascript">
+        function updatestation(station_number){
+
+            $.ajax({
+            url: "/ajax",
+            type: "get",
+            data: {
+                "number":station_number
+            },
+            dataType: "json",
+            success: function (result) {
+                {#var json = JSON.parse(result);#}
+
+                document.getElementById('bike_available').innerHTML = result['bike_available'];
+                document.getElementById("station").innerHTML = result['station'];
+                document.getElementById("status").innerHTML = result['status'];
+                document.getElementById("stands").innerHTML = result['stands_available'];
+            }
+            });
+        }
+    </script>
+     <script>
+    /*
+     Initialize and add the map
+     */
+    function initMap() {
+      // The location of Uluru
+      var uluru = {lat: 53.3488, lng: -6.281637};
+
+      // The map, centered at Uluru
+      map = new google.maps.Map(
+          document.getElementById('MAP_DIV'), {zoom: 13, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+        {% for i in realtime_data %}
+
+            var near1 = {lat: {{ i[4] }}, lng: {{ i[5] }} };
+            var marker1 = new google.maps.Marker({position:near1,map: map});
+            var infowindow = new google.maps.InfoWindow();
+
+
+    google.maps.event.addListener(marker1, 'click', function () {
+        {#infowindow.setContent('Time : {{ i[0] }} , Number : {{ i[1] }} , Name : {{ i[2] }}, Address : {{ i[3] }}, bike_stands : {{ i[8] }},  available_bike_stands :{{ i[9] }}, Available_bikes : {{ i[10] }} Station_status : {{ i[11] }}');#}
+        infowindow.setContent("<div><ul><li>Time : {{ i[0] }}</li><li>Number : {{ i[1] }}</li><li>Name : {{ i[2] }}</li><li>Address : {{ i[3] }}</li><li>bike_stands : {{ i[8] }}</li><li>available_bike_stands :{{ i[9] }}</li><li>Available_bikes : {{ i[10] }}</li><li>Station_status : {{ i[11] }}</li><ul></div>");
+        infowindow.setPosition(new google.maps.LatLng({{ i[4] }}, {{ i[5] }}));
+        infowindow.open(map);
+        updatestation({{ i[1] }});
+    });
+
+        {% endfor %}
+    marker.setMap(map);
+
+    }
+    </script>
+
+
+
+{#</script>#}
+</body>
+
+</html>
