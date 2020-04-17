@@ -1,5 +1,5 @@
 from flask import Blueprint, request, json
-from db_connection import connectMysql, getForecast
+from db_connection import connectMysql, getForecast,getConnection
 from ML import ML
 import pandas as pd
 import datetime
@@ -12,14 +12,19 @@ pred_bp = Blueprint("pred",__name__)
 @pred_bp.route('/pred',methods=['POST','GET'])
 def pred():
     '''get daily prediction data'''
+
+    # connect database to access real-time data
     u = connectMysql()
     v = getForecast()
 
+    # get data from frontend
     start_station = request.args.get("start_station")
     destination_station = request.args.get("destination_station")
     day_of_travel = request.args.get("day_of_travel")
     hour_of_travel = request.args.get("hour_of_travel")
-    print(start_station,destination_station,day_of_travel,hour_of_travel)
+    #print(start_station,destination_station,day_of_travel,hour_of_travel)
+
+    # get backend data of the corresponding stations
     for i in range(len(u)):
         if start_station == u[i][2]:
             start_station_number = u[i][1]
@@ -30,7 +35,7 @@ def pred():
             end_banking = u[i][6]
             end_bike_stands = u[i][8]
 
-
+    # get weather forecast information according to the user's input
     day = pd.to_datetime(day_of_travel)
     day = day.weekday()+1
     weather_info = []
@@ -58,6 +63,7 @@ def pred():
     wind_speed = weather_info[8]
     main_describe = weather_info[9]
 
+    # encode categorical features
     if start_banking == 'False':
         start_banking = 0
     else:
@@ -77,8 +83,8 @@ def pred():
     else:
         main_describe = 3
 
-    start_arr = [float(day), float(hour_of_travel), float(start_station_number), float(start_bike_stands), float(start_banking), float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max), float(wind_speed), float(pressure), float(humidity)]
-    end_arr = [float(day), float(hour_of_travel), float(end_station_number), float(end_bike_stands), float(end_banking), float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max), float(wind_speed), float(pressure), float(humidity)]
+
+    # get historical data to print the first and second charts
     s,d = getHistoricalData(start_station_number,end_station_number,hour_of_travel)
     x_axis = []
     y_axis_bike = []
@@ -87,6 +93,15 @@ def pred():
         x_axis.append(s[i][1].split(' ')[0])
         y_axis_bike.append(s[i][11])
         y_axis_stands.append(s[i][10])
+
+    # invoke prediction program and feed all parameters
+    start_arr = [float(day), float(hour_of_travel), float(start_station_number), float(start_bike_stands),
+                 float(start_banking), float(main_describe), float(temp), float(feels_like), float(temp_min),
+                 float(temp_max), float(wind_speed), float(pressure), float(humidity)]
+    end_arr = [float(day), float(hour_of_travel), float(end_station_number), float(end_bike_stands), float(end_banking),
+               float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max),
+               float(wind_speed), float(pressure), float(humidity)]
+
     result_1 = ML.predict_available_bike(start_arr)
     result_2 = ML.predict_available_stands(end_arr)
     final = {
@@ -100,18 +115,9 @@ def pred():
     return json.dumps(final)
 
 def getHistoricalData(start_station_number,destination_station_number,hour):
-    with SSHTunnelForwarder(
-            ("ec2-3-80-6-206.compute-1.amazonaws.com",22),  # B机器的配置
-            ssh_pkey="/Users/freddie/Downloads/asw-education-key.pem",
-            ssh_username="ec2-user",
-            remote_bind_address=("tutorial-db-instance.cf2q3iwaca38.us-east-1.rds.amazonaws.com", 3306)) as server:  # A机器的配置
+        '''get historical data of the last seven days '''
 
-        db_connect = pymysql.connect(host='127.0.0.1',  # 此处必须是是127.0.0.1
-                                     port=server.local_bind_port,
-                                     user="tutorial_user",
-                                     passwd="nyj19971023",
-                                     db="Bike")
-
+        db_connect = getConnection()
         cur = db_connect.cursor()
 
         forma = '%a %b %e %H:%i:%s %Y'
@@ -131,7 +137,9 @@ def getHistoricalData(start_station_number,destination_station_number,hour):
 
 @pred_bp.route('/predict_all',methods=['POST','GET'])
 def predict_all():
-    '''get hourly prediction data'''
+    '''get hourly prediction data on the given date,
+    basically just repeat the same prediction process 24 fimes'''
+
     u = connectMysql()
     v = getForecast()
 
@@ -155,9 +163,9 @@ def predict_all():
     day = day.weekday()+1
     weather_info = []
 
-    #predict the whole day
     result_1 = {}
     result_2 = {}
+    # hour changes from 0 to 23 and the else arguments are the same
     for clock in range(24):
         for i in range(len(v)):
             date = (v[i][0].split(" "))[0]

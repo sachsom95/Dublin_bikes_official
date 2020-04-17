@@ -2,10 +2,10 @@ import pymysql
 
 def getConnection():
     '''get connection to db'''
-    sql_hostname = 'localhost'
-    sql_username = 'root'
+    sql_hostname = 'tutorial-db-instance.cf2q3iwaca38.us-east-1.rds.amazonaws.com'
+    sql_username = 'tutorial_user'
     sql_password = 'nyj19971023'
-    sql_main_database = 'db1'
+    sql_main_database = 'Bike'
     sql_port = 3306
     connection = pymysql.connect(host=sql_hostname,
                                  user=sql_username,
@@ -20,7 +20,7 @@ def connectMysql():
     connection = getConnection()
     cursor = connection.cursor()
 
-    sql = 'select * from db1.bike_station'
+    sql = 'select * from Bike.realtime_data'
 
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -33,7 +33,7 @@ def getForecast():
     connection = getConnection()
     cursor = connection.cursor()
 
-    sql = 'select * from db1.forecast'
+    sql = 'select * from Bike.forecast'
 
     cursor.execute(sql)
     result = cursor.fetchall()

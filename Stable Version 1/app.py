@@ -9,5 +9,7 @@ app.register_blueprint(pred_bp)
 
 if __name__ == '__main__':
     app.run(
-        debug=True
+        debug=True,
+        host='ec2-3-80-6-206.compute-1.amazonaws.com',
+        port=5000
     )
