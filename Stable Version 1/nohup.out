@@ -1,0 +1,1563 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+209.17.96.90 - - [14/Apr/2020 18:50:19] "[37mGET / HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:47] "[37mGET / HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:48] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:48] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:48] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:48] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:48] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:49] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:50] "[37mGET / HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:50] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:51] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:52] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:53] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:53] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:53] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.92.51.30 - - [14/Apr/2020 19:08:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+202.83.42.112 - - [14/Apr/2020 19:08:53] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+202.83.42.112 - - [14/Apr/2020 19:08:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET / HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:32] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:33] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:33] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:33] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:34] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:35] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:35] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:35] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+80.233.57.10 - - [14/Apr/2020 19:10:47] "[37mGET / HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:10:57] "[37mGET / HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:11:08] "[37mGET /realtime?number=42 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:11:12] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:11:14] "[37mGET /realtime?number=15 HTTP/1.1[0m" 200 -
+80.233.57.10 - - [14/Apr/2020 19:11:23] "[37mGET /realtime?number=26 HTTP/1.1[0m" 200 -
+196.52.43.102 - - [14/Apr/2020 19:24:02] "[37mGET / HTTP/1.0[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:12] "[37mGET / HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:12] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:13] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:14] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:15] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:15] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:15] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:15] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:15] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:16] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+137.97.186.199 - - [14/Apr/2020 20:19:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+35.237.4.214 - - [14/Apr/2020 20:33:58] "[37mGET / HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:09] "[37mGET / HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:10] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:11] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:11] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:11] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:11] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:11] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:12] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:13] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:34:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+109.77.210.226 - - [14/Apr/2020 20:34:21] "[37mGET /realtime?number=5 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:47] "[37mGET /realtime?number=51 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:50] "[37mGET /realtime?number=22 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:52] "[37mGET /realtime?number=115 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:54] "[37mGET /realtime?number=109 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:57] "[37mGET /realtime?number=115 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:35:59] "[37mGET /realtime?number=45 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:36:02] "[37mGET /realtime?number=23 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:36:03] "[37mGET /realtime?number=40 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:36:05] "[37mGET /realtime?number=87 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:36:07] "[37mGET /realtime?number=93 HTTP/1.1[0m" 200 -
+109.77.210.226 - - [14/Apr/2020 20:36:09] "[37mGET /realtime?number=103 HTTP/1.1[0m" 200 -
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+37.228.255.176 - - [14/Apr/2020 22:26:57] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:27:20] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=KILMAINHAM%20GAOL&day_of_travel=2020-04-19&hour_of_travel=16 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:27:20] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=KILMAINHAM%20GAOL&day_of_travel=2020-04-19&hour_of_travel=16 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:28:36] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:28:59] "[37mGET / HTTP/1.1[0m" 200 -
+80.233.46.155 - - [14/Apr/2020 22:29:07] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:29:11] "[37mGET /realtime?number=38 HTTP/1.1[0m" 200 -
+80.233.46.155 - - [14/Apr/2020 22:29:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+80.233.46.155 - - [14/Apr/2020 22:29:39] "[37mGET /realtime?number=27 HTTP/1.1[0m" 200 -
+80.233.46.155 - - [14/Apr/2020 22:29:41] "[37mGET /realtime?number=13 HTTP/1.1[0m" 200 -
+80.233.46.155 - - [14/Apr/2020 22:29:44] "[37mGET /realtime?number=27 HTTP/1.1[0m" 200 -
+80.233.46.155 - - [14/Apr/2020 22:29:45] "[37mGET /realtime?number=18 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:30:00] "[37mGET /realtime?number=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:31:02] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=21 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:31:03] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=21 HTTP/1.1[0m" 200 -
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+37.228.255.176 - - [14/Apr/2020 22:38:07] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:14] "[37mGET /realtime?number=59 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:36] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:37] "[37mGET /predict_all?start_station=HANOVER%20QUAY&destination_station=GRAND%20CANAL%20DOCK&day_of_travel=2020-04-18&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:37] "[37mGET /pred?start_station=HANOVER%20QUAY&destination_station=GRAND%20CANAL%20DOCK&day_of_travel=2020-04-18&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:47] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:48] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:38:54] "[37mGET /realtime?number=63 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:30] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:31] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:32] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:43] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-17&hour_of_travel=7 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:44] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-17&hour_of_travel=7 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:39:58] "[37mGET /realtime?number=36 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:40:27] "[37mGET /realtime?number=47 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:40:28] "[37mGET /realtime?number=39 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:40:29] "[37mGET /realtime?number=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:43:00] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:43:25] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=19 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:43:26] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=CHARLEMONT%20PLACE&day_of_travel=2020-04-18&hour_of_travel=19 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:44:49] "[37mGET / HTTP/1.1[0m" 200 -
+31.13.127.2 - - [14/Apr/2020 22:45:48] "[37mGET / HTTP/1.1[0m" 200 -
+31.13.127.10 - - [14/Apr/2020 22:45:49] "[37mGET / HTTP/1.1[0m" 200 -
+209.17.97.74 - - [14/Apr/2020 22:51:59] "[37mGET / HTTP/1.0[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:54:02] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-18&hour_of_travel=7 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 22:54:02] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-18&hour_of_travel=7 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 23:12:22] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 23:12:47] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [14/Apr/2020 23:12:56] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-18&hour_of_travel=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 23:12:57] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-18&hour_of_travel=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 23:14:50] "[37mGET /realtime?number=88 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [14/Apr/2020 23:14:54] "[37mGET /realtime?number=88 HTTP/1.1[0m" 200 -
+185.202.2.132 - - [15/Apr/2020 04:14:34] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [15/Apr/2020 04:14:34] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.202.2.132 - - [15/Apr/2020 04:44:38] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [15/Apr/2020 04:44:38] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+92.63.194.15 - - [15/Apr/2020 06:51:45] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+92.63.194.15 - - [15/Apr/2020 06:51:45] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET / HTTP/1.1[0m" 200 -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+131.196.78.4 - - [15/Apr/2020 08:05:12] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+69.171.251.34 - - [15/Apr/2020 08:05:19] "[37mGET / HTTP/1.1[0m" 200 -
+69.171.251.12 - - [15/Apr/2020 08:05:19] "[37mGET / HTTP/1.1[0m" 200 -
+173.252.95.13 - - [15/Apr/2020 08:05:20] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+173.252.87.28 - - [15/Apr/2020 08:05:21] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 206 -
+173.252.87.21 - - [15/Apr/2020 08:05:22] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 206 -
+212.129.76.15 - - [15/Apr/2020 08:09:45] "[37mGET / HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:45] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:46] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:46] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:46] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:46] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:47] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:47] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:47] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:48] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:49] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:49] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:49] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:49] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:49] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:51] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+212.129.76.15 - - [15/Apr/2020 08:09:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 08:24:57] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 08:25:05] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 08:25:15] "[37mGET /predict_all?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-19&hour_of_travel=18 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 08:25:17] "[37mGET /pred?start_station=FITZWILLIAM%20SQUARE%20WEST&destination_station=HARDWICKE%20PLACE&day_of_travel=2020-04-19&hour_of_travel=18 HTTP/1.1[0m" 200 -
+83.97.20.33 - - [15/Apr/2020 10:10:37] code 400, message Bad request syntax ('\x00\x00\x00\xa4\xffSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+83.97.20.33 - - [15/Apr/2020 10:10:37] "[35m[1m   \xa4\xffSMBr    @              @    \x81 PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 [0m" HTTPStatus.BAD_REQUEST -
+83.97.20.33 - - [15/Apr/2020 10:10:38] "[37mGET / HTTP/1.1[0m" 200 -
+61.151.206.27 - - [15/Apr/2020 10:14:44] "[37mGET / HTTP/1.0[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:46] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:47] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:47] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:47] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:47] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:47] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:48] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:48] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:48] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:48] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:48] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:14:48] "[37mGET /?nsukey=IHLIKkKef35yIayzLUgWKyWS2OQRz0GxxGeFf2QkcbtcAT%2BkDKDN33nO362ezfs7SiiwR2Bdmen%2Fvg%2FL1UPowlMZjUnOPsQUkdEMvqW0qNlzctZGhc3SjcK2eOt3uuzxUv8wzwp7VnQ6YPPrthZazVsoVSqlGh7tBq%2FE9bGZAxSFaTwf82lU4RVIMyAx2q%2FmFrA4vyq3vsxzeQZonRQ2Yw%3D%3D HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:49] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:50] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:50] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:51] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:14:51] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:01] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:01] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:01] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:02] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:02] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+120.84.9.147 - - [15/Apr/2020 10:15:22] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:23] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:46] "[37mGET /realtime?number=40 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:50] "[37mGET /realtime?number=42 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:15:59] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:16:01] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:16:03] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:16:13] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:16:41] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=OLIVER%20BOND%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:16:42] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=OLIVER%20BOND%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:03] "[37mGET /realtime?number=6 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:13] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=OLIVER%20BOND%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:14] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=OLIVER%20BOND%20STREET&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:38] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:54] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=PORTOBELLO%20ROAD&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:19:55] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=PORTOBELLO%20ROAD&day_of_travel=2020-04-16&hour_of_travel=21 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:20:25] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:20:41] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:20:41] "[37mGET /?nsukey=m%2BxQ5agnEKp9EEet5%2FmBvQpBmNU3ztleOuWa9SnkZAuDvyMEVSB2QgGSoXsHACy232A%2BkOQL94HWxwJ575Q%2BJ8%2F49OCMHkcV%2BVH%2BitH62qhw4o%2Byk4bnUGYtDuIOxJ81%2Bxa7hgNUVs8A1iLAdGU901roWYwPY34DJF%2F3hKuGopUiLwrqJpvNY1wF9TmS74CvFCocRw01WVlzuRGpjx0OOw%3D%3D HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:20:58] "[37mGET /pred?start_station=FREDERICK%20STREET%20SOUTH&destination_station=FITZWILLIAM%20SQUARE%20EAST&day_of_travel=2020-04-19&hour_of_travel=20 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:20:58] "[37mGET /predict_all?start_station=FREDERICK%20STREET%20SOUTH&destination_station=FITZWILLIAM%20SQUARE%20EAST&day_of_travel=2020-04-19&hour_of_travel=20 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:09] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:12] "[37mGET /realtime?number=51 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:14] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:18] "[37mGET /realtime?number=51 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:19] "[37mGET /realtime?number=52 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:20] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:29] "[37mGET /realtime?number=73 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:21:32] "[37mGET /realtime?number=74 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:34] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:35] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:40] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:41] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:52] "[37mGET /realtime?number=33 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:21:56] "[37mGET /realtime?number=87 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:24] "[37mGET /realtime?number=84 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:29] "[37mGET /realtime?number=18 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:35] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:38] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:50] "[37mGET /realtime?number=33 HTTP/1.1[0m" 200 -
+120.84.9.147 - - [15/Apr/2020 10:22:58] "[37mGET /realtime?number=31 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:23:43] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:23:55] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:24:12] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:31] "[37mGET /predict_all?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:31] "[37mGET /pred?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:41] "[37mGET /predict_all?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:41] "[37mGET /pred?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:49] "[37mGET /predict_all?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:49] "[37mGET /pred?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:59] "[37mGET /predict_all?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:25:59] "[37mGET /pred?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:26:04] "[37mGET /predict_all?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:26:04] "[37mGET /pred?start_station=PORTOBELLO%20ROAD&destination_station=NORTH%20CIRCULAR%20ROAD%20(O%27CONNELL%27S)&day_of_travel=2020-04-16&hour_of_travel=4 HTTP/1.1[0m" 200 -
+/home/ec2-user/my_app/env/lib64/python3.6/site-packages/werkzeug/filesystem.py:60: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ascii'
+  BrokenFilesystemWarning,
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:30] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:31] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /?nsukey=g1YUrGL0VXAt0XXfcx99Sz0cJQDfJnkcwigmJ%2FoFCGEUqdbGRHwgsr%2B%2F2cxcI0d7hnIG6vy0sjrHpzvsnyxD5FUFrjxYKDQpDDmsUHGPSfQ4eZ4B14rhHTHmRYEL3ibySrUfBOieROjWlKweg1wCGG%2FoEhQ59YQ4tp01yuT%2FuGNyOj8d5%2BYu4GwsQ2nr2symz1ySIIRU1ZvkMnousHoSgw%3D%3D HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:47] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:48] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:50] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:51] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:51] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:32:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 10:33:02] "[37mGET /predict_all?start_station=CHRISTCHURCH%20PLACE&destination_station=ST.%20JAMES%20HOSPITAL%20(CENTRAL)&day_of_travel=2020-04-17&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:02] "[37mGET /pred?start_station=CHRISTCHURCH%20PLACE&destination_station=ST.%20JAMES%20HOSPITAL%20(CENTRAL)&day_of_travel=2020-04-17&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:02] "[37mGET /realtime?number=13 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:04] "[37mGET /predict_all?start_station=CHRISTCHURCH%20PLACE&destination_station=ST.%20JAMES%20HOSPITAL%20(CENTRAL)&day_of_travel=2020-04-17&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:05] "[37mGET /pred?start_station=CHRISTCHURCH%20PLACE&destination_station=ST.%20JAMES%20HOSPITAL%20(CENTRAL)&day_of_travel=2020-04-17&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /?nsukey=WN3OT90GnDgosUI9f%2FjFshArF4hNzAMCE%2BsK7S5Yo7u6STLDqNRfn%2B8jwdwdXqNljFPr%2FAVKS%2BO54RKG3DytfbsBnzxeqHNkeG6PQAb7%2Bojnm9SbqpZnFT8wPyXpNGWu7foPdddgglZfKAiGhzAEEDvn6wPLhW%2Bt2KyAehYG6laa2S%2BariTLU3YrPiQVaP6af133lEnr1UjEqr%2FFUVJcCA%3D%3D HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:22] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:23] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:23] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:23] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:23] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:24] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:24] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:24] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:24] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:24] "[37mGET /static/assets/fonts/fa-regular-400.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:33:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.151.178.197 - - [15/Apr/2020 10:33:39] "[37mGET / HTTP/1.1[0m" 200 -
+61.151.178.197 - - [15/Apr/2020 10:33:44] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+61.151.178.197 - - [15/Apr/2020 10:33:47] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+61.151.178.197 - - [15/Apr/2020 10:33:52] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+61.151.178.197 - - [15/Apr/2020 10:34:06] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:39:54] "[37mGET /predict_all?start_station=PEARSE%20STREET&destination_station=PORTOBELLO%20ROAD&day_of_travel=2020-04-18&hour_of_travel=6 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:39:54] "[37mGET /pred?start_station=PEARSE%20STREET&destination_station=PORTOBELLO%20ROAD&day_of_travel=2020-04-18&hour_of_travel=6 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[37mGET / HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:11] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:12] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+5.157.13.6 - - [15/Apr/2020 10:46:28] "[37mGET /predict_all?start_station=AVONDALE%20ROAD&destination_station=CHRISTCHURCH%20PLACE&day_of_travel=2020-04-16&hour_of_travel=2 HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:46:28] "[37mGET /pred?start_station=AVONDALE%20ROAD&destination_station=CHRISTCHURCH%20PLACE&day_of_travel=2020-04-16&hour_of_travel=2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:24] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:25] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:26] "[36mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:26] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:26] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:26] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:26] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+37.228.255.176 - - [15/Apr/2020 10:49:34] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:51] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:52] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:53] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:53] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 10:49:53] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+5.157.13.6 - - [15/Apr/2020 10:57:11] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:25] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:26] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:27] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:27] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:27] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:27] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:27] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:28] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:03:29] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:04:01] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:05:54] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:05:58] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+223.71.167.163 - - [15/Apr/2020 11:10:08] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:30:57] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:30:59] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 11:31:01] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:01] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:01] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:01] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:02] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:06] "[37mGET /realtime?number=32 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:07] "[37mGET /realtime?number=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:07] "[37mGET /realtime?number=53 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:15] "[37mGET /realtime?number=114 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 11:31:17] "[37mGET /realtime?number=30 HTTP/1.1[0m" 200 -
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:28] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:29] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:30] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:30] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:33] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:34] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:34] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:34] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:34] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:28:34] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [15/Apr/2020 13:41:16] "[37mGET / HTTP/1.1[0m" 200 -
+217.23.3.91 - - [15/Apr/2020 13:42:58] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:43:45] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:44:07] "[37mGET /pred?start_station=BLESSINGTON%20STREET&destination_station=EMMET%20ROAD&day_of_travel=2020-04-19&hour_of_travel=21 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:44:08] "[37mGET /predict_all?start_station=BLESSINGTON%20STREET&destination_station=EMMET%20ROAD&day_of_travel=2020-04-19&hour_of_travel=21 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:23] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:44] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:45] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:46] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:46] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:46] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:46] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:47] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:48] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:48] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:48] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:48] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:49] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:49] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:50] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:50] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:50] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:52] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:53] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:53] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:53] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 13:45:53] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:03:48] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+37.228.255.176 - - [15/Apr/2020 14:10:40] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:10:48] "[37mGET /realtime?number=116 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:10:49] "[37mGET /realtime?number=45 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:10:51] "[37mGET /realtime?number=15 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:10:54] "[37mGET /realtime?number=59 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:12:58] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+Traceback (most recent call last):
+  File "app.py", line 2, in <module>
+    from initial import init_bp
+  File "/home/ec2-user/Bike/Stable_V1/initial.py", line 2, in <module>
+    from db_connection import connectMysql, getForecast
+  File "/home/ec2-user/Bike/Stable_V1/db_connection.py", line 1, in <module>
+    import pymysql
+ImportError: No module named pymysql
+37.228.255.176 - - [15/Apr/2020 14:13:43] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:43] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:43] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:43] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:44] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:44] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:44] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:44] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:44] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:45] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:45] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:45] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:45] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:45] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:46] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 14:13:47] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:49] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:50] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:51] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:51] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:51] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:51] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:52] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:52] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:52] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:52] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [15/Apr/2020 14:13:52] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:56] "[37mGET /realtime?number=116 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:13:59] "[37mGET /realtime?number=33 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:00] "[37mGET /realtime?number=32 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:02] "[37mGET /realtime?number=30 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:04] "[37mGET /realtime?number=53 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:06] "[37mGET /realtime?number=76 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:21] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:22] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:23] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:23] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:23] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:23] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:39] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:14:54] "[37mGET /realtime?number=27 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:15:07] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-17&hour_of_travel=14 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:15:08] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-17&hour_of_travel=14 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:15:32] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-15&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:15:32] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-15&hour_of_travel=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:16:14] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-19&hour_of_travel=5 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:16:15] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-19&hour_of_travel=5 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 14:16:51] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:31] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:32] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:32] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:32] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:32] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:33] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:38:33] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:46:03] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-19&hour_of_travel=19 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 19:46:04] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-19&hour_of_travel=19 HTTP/1.1[0m" 200 -
+209.17.96.250 - - [15/Apr/2020 20:26:16] "[37mGET / HTTP/1.0[0m" 200 -
+185.202.1.85 - - [15/Apr/2020 20:40:29] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.1.85 - - [15/Apr/2020 20:40:29] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+37.228.255.176 - - [15/Apr/2020 21:02:12] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 21:02:22] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-20&hour_of_travel=12 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 21:02:22] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-20&hour_of_travel=12 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [15/Apr/2020 21:03:03] "[37mGET /realtime?number=52 HTTP/1.1[0m" 200 -
+209.17.96.58 - - [15/Apr/2020 22:16:17] "[37mGET / HTTP/1.1[0m" 200 -
+5.188.206.18 - - [16/Apr/2020 04:24:54] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+5.188.206.18 - - [16/Apr/2020 04:24:54] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+198.143.158.82 - - [16/Apr/2020 04:35:44] "[37mGET / HTTP/1.1[0m" 200 -
+120.84.9.147 - - [16/Apr/2020 05:37:15] "[37mGET / HTTP/1.1[0m" 200 -
+45.136.108.68 - - [16/Apr/2020 06:17:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+45.136.108.68 - - [16/Apr/2020 06:17:17] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.202.2.132 - - [16/Apr/2020 06:17:59] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [16/Apr/2020 06:17:59] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.202.2.132 - - [16/Apr/2020 06:45:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [16/Apr/2020 06:45:49] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:26] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:27] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 07:40:31] "[37mGET /realtime?number=38 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:35] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:39] "[37mGET /realtime?number=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:42] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:43] "[37mGET /realtime?number=6 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:54] "[37mGET /realtime?number=6 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:40:59] "[37mGET /realtime?number=17 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:41:01] "[37mGET /realtime?number=73 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:41:09] "[37mGET /realtime?number=73 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:41:10] "[37mGET /realtime?number=7 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:41:35] "[37mGET /predict_all?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-20&hour_of_travel=21 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 07:41:36] "[37mGET /pred?start_station=BUCKINGHAM%20STREET%20LOWER&destination_station=BUCKINGHAM%20STREET%20LOWER&day_of_travel=2020-04-20&hour_of_travel=21 HTTP/1.1[0m" 200 -
+5.188.206.18 - - [16/Apr/2020 08:07:06] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+5.188.206.18 - - [16/Apr/2020 08:07:06] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET / HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:04] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:05] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:36:06] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET / HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:18] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:19] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:20] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+46.7.210.183 - - [16/Apr/2020 08:36:27] "[37mGET /realtime?number=29 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:36:30] "[37mGET /realtime?number=109 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:39:35] "[37mGET /predict_all?start_station=BOLTON%20STREET&destination_station=COLLINS%20BARRACKS%20MUSEUM&day_of_travel=2020-04-20&hour_of_travel=12 HTTP/1.1[0m" 200 -
+46.7.210.183 - - [16/Apr/2020 08:39:35] "[37mGET /pred?start_station=BOLTON%20STREET&destination_station=COLLINS%20BARRACKS%20MUSEUM&day_of_travel=2020-04-20&hour_of_travel=12 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:39:55] "[37mGET /predict_all?start_station=BOLTON%20STREET&destination_station=DENMARK%20STREET%20GREAT&day_of_travel=2020-04-18&hour_of_travel=5 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:39:55] "[37mGET /pred?start_station=BOLTON%20STREET&destination_station=DENMARK%20STREET%20GREAT&day_of_travel=2020-04-18&hour_of_travel=5 HTTP/1.1[0m" 200 -
+217.23.3.91 - - [16/Apr/2020 08:39:57] "[37mGET /realtime?number=98 HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:05] "[37mGET / HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:06] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+80.233.42.244 - - [16/Apr/2020 10:15:07] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://ec2-3-80-6-206.compute-1.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-834-057
+37.228.255.176 - - [16/Apr/2020 15:59:17] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:08:13] "[37mGET /predict_all?start_station=BENSON%20STREET&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:08:13] "[37mGET /pred?start_station=BENSON%20STREET&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:58] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:59] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:59] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:59] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:09:59] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:10:00] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:10:00] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:10:00] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:10:00] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:10:00] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:24] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:25] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:26] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:26] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:21:26] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:25:07] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-18&hour_of_travel=6 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 16:25:07] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-18&hour_of_travel=6 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:33:33] "[37mGET / HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:33:48] "[37mGET /predict_all?start_station=COLLINS%20BARRACKS%20MUSEUM&destination_station=FENIAN%20STREET&day_of_travel=2020-04-17&hour_of_travel=1 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:33:48] "[37mGET /pred?start_station=COLLINS%20BARRACKS%20MUSEUM&destination_station=FENIAN%20STREET&day_of_travel=2020-04-17&hour_of_travel=1 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:33:57] "[37mGET / HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:12] "[37mGET /predict_all?start_station=COLLINS%20BARRACKS%20MUSEUM&destination_station=FENIAN%20STREET&day_of_travel=2020-04-19&hour_of_travel=5 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:14] "[37mGET /pred?start_station=COLLINS%20BARRACKS%20MUSEUM&destination_station=FENIAN%20STREET&day_of_travel=2020-04-19&hour_of_travel=5 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:22] "[37mGET / HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:22] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:23] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:24] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:24] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:24] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:25] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:25] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:25] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:25] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:25] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:38] "[37mGET /predict_all?start_station=BROOKFIELD%20ROAD&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-19&hour_of_travel=1 HTTP/1.1[0m" 200 -
+109.201.133.26 - - [16/Apr/2020 16:34:38] "[37mGET /pred?start_station=BROOKFIELD%20ROAD&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-19&hour_of_travel=1 HTTP/1.1[0m" 200 -
+185.165.241.38 - - [16/Apr/2020 16:52:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.165.241.38 - - [16/Apr/2020 16:52:08] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+185.165.241.38 - - [16/Apr/2020 16:52:08] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+185.165.241.38 - - [16/Apr/2020 16:52:08] "[37mGET / HTTP/1.1[0m" 200 -
+59.37.97.50 - - [16/Apr/2020 17:14:56] "[37mGET / HTTP/1.0[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET / HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:00] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:01] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [16/Apr/2020 17:15:23] "[37mGET /?nsukey=0NWnYaa2aX987YKmRPCP8WQ3MS6dIdm6BHmf8VKNsOBxlfbfW0i4nzETfjGrqWR3%2BK1yB%2Ff30zzyqs5TPLDtoABIl7uCJOL77YMN2O4WLEpCwuVwekcRgsMW%2B6dhn1KyRLHnUDeE4%2BgiERikcxvQsXgI7qNRuPeKiAXZO4pHhCdRQFFTy6tkcpzeioa8kX6n%2FfEADjiHkIP7JmaST4W6lA%3D%3D HTTP/1.1[0m" 200 -
+61.151.206.27 - - [16/Apr/2020 17:15:26] "[37mGET / HTTP/1.0[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:32] "[37mGET /realtime?number=33 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:15:39] "[37mGET /realtime?number=32 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:16:37] "[37mGET /predict_all?start_station=BLESSINGTON%20STREET&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-17&hour_of_travel=16 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:16:37] "[37mGET /pred?start_station=BLESSINGTON%20STREET&destination_station=CLONMEL%20STREET&day_of_travel=2020-04-17&hour_of_travel=16 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:22:17] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:22:21] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:22:24] "[37mGET /realtime?number=6 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:22:27] "[37mGET /realtime?number=73 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 17:22:28] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [16/Apr/2020 17:22:29] "[37mGET /realtime?number=29 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:22:31] "[37mGET /realtime?number=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:23:16] "[37mGET /?nsukey=PUpqFrmznoeTgJG9pBQiheLRTn1NFmV9bQ9%2F4tQDKQmoiG6d%2Br511RfDF%2FJgyU8cAYJZkj1APBNfbWlIse%2FLr5pDNxPyVJKmYhMlo3qgcplLApOUgDQWRNuJPGRDFbPIXHCXFOqyJFX54%2FZqEKqVhHjueGjQT0AxG4OO4OSisnLTS4UCZyUojtyRxKx6M1uQHA7Xo9EpNeTA4wMJ%2FOTD1A%3D%3D HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:40:08] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:40:22] "[37mGET /?nsukey=XugHDzH07k2e2ysRYdcIrwynPO2rQkWJR%2FRsR7yqmglARswfwrj2FJsnZewZdguVZpkmLs%2BtAYbwfAf8eosh6Ebfx94In8qIu7N%2FHniO8puEuRq8AnJZEoq5450IHZf%2FPiixtyeYVuId7vxo81MCaxehGqLBDJbPYMbc3DNfP2kNu5UmYGM8v1bUibvxUUawCyuxNFRBncHhGHLkpHW6Gw%3D%3D HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:11] "[37mGET /predict_all?start_station=BENSON%20STREET&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=16 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:11] "[37mGET /pred?start_station=BENSON%20STREET&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=16 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:31] "[37mGET /predict_all?start_station=CHRISTCHURCH%20PLACE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:32] "[37mGET /pred?start_station=CHRISTCHURCH%20PLACE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:52] "[37mGET /realtime?number=9 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:54] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:56] "[37mGET /realtime?number=10 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 17:41:59] "[37mGET /realtime?number=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:04:58] "[37mGET /predict_all?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-21&hour_of_travel=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:04:58] "[37mGET /pred?start_station=CLONMEL%20STREET&destination_station=RATHDOWN%20ROAD&day_of_travel=2020-04-21&hour_of_travel=4 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:08:42] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:08:47] "[37mGET /realtime?number=106 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:32:21] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 18:32:25] "[37mGET / HTTP/1.1[0m" 200 -
+209.17.96.202 - - [16/Apr/2020 18:52:09] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:09] "[37mGET /?nsukey=f1hGheeKmt15RcBl%2BCsg0726pdNdP3GXFiMDfopI%2Fg%2BW4I6n14TrFKBNZ7CiEZq3G8TOfdD2RskicTt3FXPbxOdtzB4dZb65PUVjjDTB%2Fhj4Os8%2F9fR5lThM%2BKIQRsevXEn7OouZuKkuVNCu4R9Rq9XDTJetMUbs1nrFj8jquSHPwqjLAWeFQ%2FiDeWzh4Tb6cHOQtMwf5DgiSoAjFWYI8Q%3D%3D HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:09] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:09] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:09] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:09] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:10] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:11] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:12] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.244.61 - - [16/Apr/2020 19:05:20] "[37mGET /realtime?number=31 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET / HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:08] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:09] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:09] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:09] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+78.18.238.178 - - [16/Apr/2020 19:07:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [16/Apr/2020 20:14:52] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 20:28:40] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 20:29:21] "[37mGET /realtime?number=27 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 20:29:22] "[37mGET /realtime?number=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 20:30:34] "[37mGET /predict_all?start_station=CHRISTCHURCH%20PLACE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-19&hour_of_travel=15 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [16/Apr/2020 20:30:35] "[37mGET /pred?start_station=CHRISTCHURCH%20PLACE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-19&hour_of_travel=15 HTTP/1.1[0m" 200 -
+209.17.96.66 - - [16/Apr/2020 23:20:52] "[37mGET / HTTP/1.0[0m" 200 -
+45.136.108.20 - - [17/Apr/2020 05:37:06] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+45.136.108.20 - - [17/Apr/2020 05:37:06] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.202.2.132 - - [17/Apr/2020 07:45:23] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [17/Apr/2020 07:45:23] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.202.2.132 - - [17/Apr/2020 08:21:34] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.132 - - [17/Apr/2020 08:21:34] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+37.228.255.176 - - [17/Apr/2020 08:39:30] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:31] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:32] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 08:39:46] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=18 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 08:39:46] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=18 HTTP/1.1[0m" 200 -
+185.202.2.149 - - [17/Apr/2020 09:05:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.2.149 - - [17/Apr/2020 09:05:17] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+92.63.194.15 - - [17/Apr/2020 09:13:58] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+92.63.194.15 - - [17/Apr/2020 09:13:58] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+37.228.255.176 - - [17/Apr/2020 09:26:13] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 09:26:14] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:14] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:14] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:14] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:15] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 09:26:31] "[37mGET /realtime?number=6 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 09:26:33] "[37mGET /realtime?number=73 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 09:26:35] "[37mGET /realtime?number=7 HTTP/1.1[0m" 200 -
+92.63.194.15 - - [17/Apr/2020 11:18:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+92.63.194.15 - - [17/Apr/2020 11:18:03] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/css/addition.css HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:33] "[36mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/script.min.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:34] "[36mGET /static/assets/js/splash.js HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:35] "[36mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:35] "[36mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:35] "[36mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 304 -
+37.228.255.176 - - [17/Apr/2020 12:05:35] "[36mGET /static/assets/json/dublin.json HTTP/1.1[0m" 304 -
+59.37.97.50 - - [17/Apr/2020 12:05:56] "[37mGET / HTTP/1.0[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:53] "[37mGET / HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:54] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:54] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:54] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:54] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:55] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:55] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:55] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:57] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:57] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:58] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:07:59] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:00] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:01] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:05] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:06] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:12] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:12] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:12] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:12] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:16] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:08:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+37.228.255.176 - - [17/Apr/2020 12:12:52] "[37mGET / HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:13:00] "[37mGET / HTTP/1.1[0m" 200 -
+185.202.1.183 - - [17/Apr/2020 12:13:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.202.1.183 - - [17/Apr/2020 12:13:20] "[35m[1m  /*\xe0     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+111.112.156.52 - - [17/Apr/2020 12:13:48] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+37.228.255.176 - - [17/Apr/2020 12:14:18] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+111.112.156.52 - - [17/Apr/2020 12:14:35] "[37mGET / HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:14:38] "[33mGET /static/assets/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+111.112.156.52 - - [17/Apr/2020 12:15:03] "[37mGET / HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:04] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:04] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:04] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:04] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:04] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:05] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:05] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:13] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:21] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:21] "[37mGET /static/assets/fonts/fa-solid-900.woff HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:21] "[37mGET /static/assets/fonts/fontawesome-webfont.woff HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:21] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:26] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:26] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:28] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:45] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:45] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:45] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:45] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:15:47] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:54] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:55] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:15:56] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:17:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+49.7.4.57 - - [17/Apr/2020 12:19:11] "[37mGET / HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:12] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:13] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:16] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:17] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:17] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:17] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+49.7.4.57 - - [17/Apr/2020 12:19:18] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:19:55] "[37mGET / HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:21:45] "[37mGET /predict_all?start_station=DAME%20STREET&destination_station=CUSTOM%20HOUSE&day_of_travel=2020-04-17&hour_of_travel=13 HTTP/1.1[0m" 200 -
+111.112.156.52 - - [17/Apr/2020 12:21:46] "[37mGET /pred?start_station=DAME%20STREET&destination_station=CUSTOM%20HOUSE&day_of_travel=2020-04-17&hour_of_travel=13 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:47] "[37mGET /?nsukey=22X2qM3wdoaTQnesylQ6boBjIpwxaIv9nhIBLBA5eIPMAJacLcZodsTaTNY7hZmb7rHH1uMUMoNv6X47iz70EWNqE%2F%2FsDQlRPyX06z9cz7BUHm1pDU3dRrfBIOLIUHq42roHHIJfEn9hK0wiOI%2FFEJPqmq9YMkfRwGtjaKJMbmOp4HBNcTHgnmbVPsh1cuQzVkzC2xLkSr%2Fgk4z%2Bq20J6Q%3D%3D HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:48] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:48] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:48] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:48] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:49] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:50] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:28:51] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:29:00] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:29:13] "[37mGET /?nsukey=22X2qM3wdoaTQnesylQ6boBjIpwxaIv9nhIBLBA5eIPMAJacLcZodsTaTNY7hZmb7rHH1uMUMoNv6X47iz70EWNqE%2F%2FsDQlRPyX06z9cz7BUHm1pDU3dRrfBIOLIUHq42roHHIJfEn9hK0wiOI%2FFEJPqmq9YMkfRwGtjaKJMbmOp4HBNcTHgnmbVPsh1cuQzVkzC2xLkSr%2Fgk4z%2Bq20J6Q%3D%3D HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:29:14] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:29:16] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:29:17] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:29:43] "[37mGET / HTTP/1.1[0m" 200 -
+61.151.206.27 - - [17/Apr/2020 12:29:56] "[37mGET / HTTP/1.0[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:01] "[37mGET /?nsukey=ayjxKnPEchcazgvVTK0KzO0itTCF1K2%2BJb%2BDFVOKM7YENg0YMihht9FNuDNo%2BzY37oDnyUPbFR1fILtEYwQ5%2FkyLcG3Tiv1mx0YO7VxwH1dGYThOQWADHcIJkRW7x6Z9UMsYJ80%2B0U46b5QzOpraxB6HaLdoOehecLi3pXBM7scj3Lwy7Eur434ryHerh2%2BH HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:02] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:02] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:03] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:03] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:04] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:04] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:05] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:06] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:06] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:07] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:07] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:10] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:44] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+223.104.185.49 - - [17/Apr/2020 12:30:44] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:34] "[37mGET / HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:35] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:35] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:36] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:36] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:36] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:36] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:38] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:41] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:41] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:34:44] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:01] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:20] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:50] "[37mGET / HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:51] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:53] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:54] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:55] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:35:57] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:00] "[37mGET / HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:00] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:00] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:00] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:01] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:01] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:05] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:05] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:06] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:09] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:09] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:26] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:35] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:35] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:35] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:36:37] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+223.104.212.37 - - [17/Apr/2020 12:37:11] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:52:56] "[37mGET /?nsukey=KV62T5goVc%2F71TGqGCaxyAiR%2BMNqe9SJ4Pn9x1DZCx887fLM5MO6GNgKY1bp0WySZkJQ7kPwjIEbULwClblhy0e3zwegrAs8AxvjG6psOobCMgpELezSbQnozL25Sq08sazQ8NBtsm4rRABnAUjQYA%3D%3D HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:52:57] "[37mGET /?nsukey=KV62T5goVc%2F71TGqGCaxyAiR%2BMNqe9SJ4Pn9x1DZCx887fLM5MO6GNgKY1bp0WySZkJQ7kPwjIEbULwClblhy0e3zwegrAs8AxvjG6psOobCMgpELezSbQnozL25Sq08sazQ8NBtsm4rRABnAUjQYA%3D%3D HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:52:58] "[37mGET /?nsukey=KV62T5goVc%2F71TGqGCaxyAiR%2BMNqe9SJ4Pn9x1DZCx887fLM5MO6GNgKY1bp0WySZkJQ7kPwjIEbULwClblhy0e3zwegrAs8AxvjG6psOobCMgpELezSbQnozL25Sq08sazQ8NBtsm4rRABnAUjQYA%3D%3D HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:52:59] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:52:59] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:01] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:02] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:03] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:05] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:05] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:06] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:06] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:09] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:42] "[37mGET / HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:46] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:46] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:48] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:49] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:53] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:54] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:55] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:53:57] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:54:03] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:54:09] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:54:10] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:54:12] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:55:47] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:55:57] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:00] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:40] "[37mGET / HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:41] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+114.241.29.111 - - [17/Apr/2020 12:56:42] "[37mGET / HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:43] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:43] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:44] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:45] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:46] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+114.241.29.111 - - [17/Apr/2020 12:56:54] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+59.37.97.50 - - [17/Apr/2020 12:57:12] "[37mGET / HTTP/1.0[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:18] "[37mGET /?nsukey=xWdlnrnZXspbZy0hW7NvSt0SbxWUSrogtgiSUF%2BjgZaa3HzDph9pmpyZVIcuGGrzOWqKB2e%2B%2F9xnwMKiSA5nwlB3W74cZiGaRnHl1nN%2BZz23V%2FbJSgTMJhfP0eEE1SzmOTgoNjdcgcnYxta3oArLqaTudPjdu5EPmYV3IhFVP1Lc%2FYX%2B8AONz1LWAVADyc6t%2B5CVt0J2CWTFSd%2Fr2tYMOw%3D%3D HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:30] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:32] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:32] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:33] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:35] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:37] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:57:56] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:00] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:00] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:00] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:01] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:03] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:05] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:07] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:07] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:08] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:11] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:11] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:12] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:13] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:13] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:17] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:17] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:28] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:30] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:37] "[37mGET /realtime?number=116 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:44] "[37mGET / HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:46] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:46] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:47] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:47] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:49] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:50] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:50] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:51] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:52] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:52] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:58:53] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:55] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:57] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:58:59] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:01] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:02] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:02] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:59:03] "[37mGET /pred?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:59:03] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:05] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+37.228.255.176 - - [17/Apr/2020 12:59:05] "[37mGET /predict_all?start_station=CONVENTION%20CENTRE&destination_station=AVONDALE%20ROAD&day_of_travel=2020-04-20&hour_of_travel=22 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:32] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:40] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:40] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 12:59:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+223.104.3.134 - - [17/Apr/2020 12:59:56] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:00] "[37mGET / HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:00] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:03] "[37mGET / HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:03] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:04] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:04] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:04] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:04] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:05] "[37mGET /static/assets/json/dublin.json HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:08] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+223.104.3.134 - - [17/Apr/2020 13:00:21] "[37mGET /static/assets/js/splash.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:23] "[37mGET /static/assets/bootstrap/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:25] "[37mGET /static/assets/js/chart.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:00:39] "[37mGET /static/assets/js/script.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:01:01] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:01:03] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:01:03] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:01:03] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:01:11] "[37mGET /static/assets/fonts/fa-solid-900.woff HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:02:41] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:04:19] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:04:20] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:05:59] "[37mGET /static/assets/fonts/fa-solid-900.ttf HTTP/1.1[0m" 200 -
+/home/ec2-user/my_app/env/lib64/python3.6/site-packages/werkzeug/filesystem.py:60: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ascii'
+  BrokenFilesystemWarning,
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+111.112.156.52 - - [17/Apr/2020 13:14:45] "[37mGET / HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+111.32.64.131 - - [17/Apr/2020 13:17:26] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:26] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:35] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:37] "[37mGET /static/assets/fonts/fa-solid-900.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:42] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:55] "[37mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:56] "[37mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:56] "[37mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:56] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:57] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:58] "[37mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:17:58] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:03] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:18] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:23] "[37mGET / HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:25] "[37mGET /static/assets/css/addition.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:25] "[37mGET /static/assets/fonts/font-awesome.min.css HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:25] "[36mGET /static/assets/fonts/material-icons.min.css HTTP/1.1[0m" 304 -
+111.32.64.131 - - [17/Apr/2020 13:18:26] "[37mGET /static/assets/fonts/MaterialIcons-Regular.woff2 HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:27] "[36mGET /static/assets/css/styles.min.css HTTP/1.1[0m" 304 -
+111.32.64.131 - - [17/Apr/2020 13:18:28] "[36mGET /static/assets/fonts/fontawesome5-overrides.min.css HTTP/1.1[0m" 304 -
+111.32.64.131 - - [17/Apr/2020 13:18:29] "[37mGET /static/assets/img/10d@2x.png HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:18:30] "[36mGET /static/assets/fonts/fontawesome-all.min.css HTTP/1.1[0m" 304 -
+111.32.64.131 - - [17/Apr/2020 13:18:32] "[37mGET /static/assets/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+111.32.64.131 - - [17/Apr/2020 13:22:48] "[37mGET /static/assets/js/extract_data.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:22:49] "[37mGET /static/assets/js/generator_script.js HTTP/1.1[0m" 200 -
+111.32.64.131 - - [17/Apr/2020 13:23:08] "[37mGET /static/assets/js/get_user_location.js HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+111.32.64.131 - - [17/Apr/2020 13:33:29] "[37mGET /static/assets/fonts/fa-solid-900.woff HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/ec2-user/my_app/env/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+37.228.255.176 - - [17/Apr/2020 13:54:51] "[37mGET / HTTP/1.1[0m" 200 -
