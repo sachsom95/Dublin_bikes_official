@@ -130,21 +130,24 @@ window.onload = function () {
 
 };//window.onload
 
+/*
+resume marker Icon by Id
+ */
 function resumeIcon(markerId) {
-            var marker = findTargetMarker(markerId);
-            var icon = marker.iconType;
-            if (icon === "red") {
-                marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/red-diamond.png");
-            } else if (icon === "yellow") {
-                marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/orange-diamond.png");
-            } else {
-                marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/grn-diamond.png");
-            }
-        }
+    var marker = findTargetMarker(markerId);
+    var icon = marker.iconType;
+    if (icon === "red") {
+        marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/red-diamond.png");
+    } else if (icon === "yellow") {
+        marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/orange-diamond.png");
+    } else {
+        marker.marker.setIcon("http://maps.google.com/mapfiles/kml/paddle/grn-diamond.png");
+    }
+}
 
 
 /*
-function to get target marker to resume the icon
+function to get target a marker object by Id
  */
 function findTargetMarker(markerId) {
     var target;

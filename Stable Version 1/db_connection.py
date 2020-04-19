@@ -1,5 +1,6 @@
 import pymysql
 
+
 def getConnection():
     '''get connection to db'''
     sql_hostname = 'tutorial-db-instance.cf2q3iwaca38.us-east-1.rds.amazonaws.com'
@@ -27,6 +28,7 @@ def connectMysql():
     connection.commit()
     connection.close()
     return result
+
 
 def getForecast():
     '''request forecast data from db'''

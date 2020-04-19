@@ -20,17 +20,19 @@ function updatestation(station_number) {
     });
 }// updatestation
 
-
+/*
+get station Id by station name
+ */
 function getStationId(stationName) {
-        var stationId;
-        for (var i = 0; i < stations.length; i++) {
-            if (stations[i].name === stationName) {
-                stationId = stations[i].number;
-                return stationId;
-            }
+    var stationId;
+    for (var i = 0; i < stations.length; i++) {
+        if (stations[i].name === stationName) {
+            stationId = stations[i].number;
+            return stationId;
         }
-        return stationId;
     }
+    return stationId;
+}
 
 
 /**
@@ -212,13 +214,13 @@ function get_data() {
 
     /*resume last direction Icon */
     var directionObject = JSON.parse(localStorage.getItem("last_direction"));
-    if(directionObject != null){
-    var lastStartName = directionObject.start;
-    var lastEndName = directionObject.end;
-    var lastStartId = getStationId(lastStartName);
-    var lastEndId = getStationId(lastEndName);
-    resumeIcon(lastStartId);
-    resumeIcon(lastEndId);
+    if (directionObject != null) {
+        var lastStartName = directionObject.start;
+        var lastEndName = directionObject.end;
+        var lastStartId = getStationId(lastStartName);
+        var lastEndId = getStationId(lastEndName);
+        resumeIcon(lastStartId);
+        resumeIcon(lastEndId);
     }
 
     /* find two new number and set Icon*/
