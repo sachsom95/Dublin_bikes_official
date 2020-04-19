@@ -1,87 +1,127 @@
-.splash
-{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background:#1a75ff;
-    z-index :200;
-    text-align:center;
-    line-height:90vh;
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1a75ff;
+    z-index: 200;
+    text-align: center;
+    line-height: 90vh;
 
 }
 
-.splash.display-none
-{
-    position:fixed;
-    opacity:0;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background:#1a75ff;
-    z-index :-10;
-    text-align:center;
-    line-height:90vh;
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1a75ff;
+    z-index: -10;
+    text-align: center;
+    line-height: 90vh;
     transition: all 1s;
 
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
 
-    to{
-        opacity:1;
+    to {
+        opacity: 1;
     }
 }
-    .fade-in{
-        opacity:0;
-        animation:fadeIn 1s ease-in forwards;
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+#weather_warning {
+    float: right;
+    color: red;
+    margin-right: 300px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
     }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
-    #weather_warning {
-            float: right;
-            color: red;
-            margin-right: 300px;
-        }
-
-        @keyframes blink{
-            0%{opacity: 1;}
-            50%{opacity: 1;}
-            50.01%{opacity: 0;}
-            100%{opacity: 0;}
-        }
-
-        @-webkit-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-moz-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-ms-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-o-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
-#weather_warning{
+#weather_warning {
     animation: blink 1s linear infinite;
     -webkit-animation: blink 1s linear infinite;
     -moz-animation: blink 1s linear infinite;
@@ -91,68 +131,68 @@
 }
 
 .lds-spinner {
-  color: official;
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
 
 .lds-spinner div {
-  transform-origin: 40px 40px;
-  animation: lds-spinner 1.2s linear infinite;
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
 }
 
 .lds-spinner div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 37px;
-  width: 6px;
-  height: 18px;
-  border-radius: 20%;
-  background: #1a75ff;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #1a75ff;
 }
 
 .lds-spinner div:nth-child(1) {
-  transform: rotate(0deg);
-  animation-delay: -1.1s;
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
 }
 
 .lds-spinner div:nth-child(2) {
-  transform: rotate(30deg);
-  animation-delay: -1s;
+    transform: rotate(30deg);
+    animation-delay: -1s;
 }
 
 .lds-spinner div:nth-child(3) {
-  transform: rotate(60deg);
-  animation-delay: -0.9s;
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
 }
 
 .lds-spinner div:nth-child(4) {
-  transform: rotate(90deg);
-  animation-delay: -0.8s;
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
 }
 
 .lds-spinner div:nth-child(5) {
-  transform: rotate(120deg);
-  animation-delay: -0.7s;
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
 }
 
 .lds-spinner div:nth-child(6) {
-  transform: rotate(150deg);
-  animation-delay: -0.6s;
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
 }
 
 .lds-spinner div:nth-child(7) {
-  transform: rotate(180deg);
-  animation-delay: -0.5s;
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
 }
 
 .lds-spinner div:nth-child(8) {
-  transform: rotate(210deg);
-  animation-delay: -0.4s;
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
 }
 
 .lds-spinner div:nth-child(9) {
@@ -177,10 +217,10 @@
 }
 
 @keyframes lds-spinner {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

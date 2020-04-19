@@ -1,0 +1,34 @@
+%_python27_major 2
+%_python27_minor 7
+%_python27_version %{_python27_major}.%{_python27_minor}
+%_python27 python%{_python27_version}
+
+%__python27 %{_bindir}/%{_python27}
+%_python27_sitelib %(%{__python27} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+%python27_sitelib %{_python27_sitelib}
+%_python27_sitearch %(%{__python27} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(plat_specific=True))")
+%python27_sitearch %{_python27_sitearch}
+
+%python27_version  %{_python27_version}
+%_python27_abi     %{_python27_version}
+%_python27_basever %{_python27_major}%{_python27_minor}
+
+%__python27_shebang sed -i -r -e '1s,^#![[:space:]]*/(usr/)?(local/)?bin/(env )?python($|[[:space:]]),#!'%{__python27}'\\4,'
+
+%__python27_shebang_path()\
+%{?!1:echo "No path provided for %%__python27_shebang_path.";exit 1}\
+shebang_path="%1"\
+find $shebang_path -type f -print -exec %{__python27_shebang} "{}" \\+ || :\
+%{nil}
+
+%_python27_bytecompile_script 'import py_compile, sys; [py_compile.compile(f, dfile=f.partition("$RPM_BUILD_ROOT")[2]) for f in sys.argv[1:]]'
+%__python27_bytecompile_pyc %{__python27} -c %{_python27_bytecompile_script}
+%__python27_bytecompile_pyo %{__python27} -O -c %{_python27_bytecompile_script}
+
+%__python27_bytecompile_path()\
+%{?!1:echo "No path provided for %%__python27_byte_compile_path.";exit 1}\
+bytecode_compilation_path="%1"\
+find $bytecode_compilation_path -type f -name "*.py" -print -exec %{__python27_bytecompile_pyc} "{}" \\+ || :\
+\
+find $bytecode_compilation_path -type f -name "*.py" -print -exec %{__python27_bytecompile_pyo} "{}" \\+ || :\
+%{nil}

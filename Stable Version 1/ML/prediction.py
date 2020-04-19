@@ -1,5 +1,5 @@
 from flask import Blueprint, request, json
-from db_connection import connectMysql, getForecast,getConnection
+from db_connection import connectMysql, getForecast, getConnection
 from ML import ML
 import pandas as pd
 import datetime
@@ -7,9 +7,10 @@ import pymysql
 from sshtunnel import SSHTunnelForwarder
 
 # blueprint for prediction part function
-pred_bp = Blueprint("pred",__name__)
+pred_bp = Blueprint("pred", __name__)
 
-@pred_bp.route('/pred',methods=['POST','GET'])
+
+@pred_bp.route('/pred', methods=['POST', 'GET'])
 def pred():
     '''get daily prediction data'''
 
@@ -22,7 +23,7 @@ def pred():
     destination_station = request.args.get("destination_station")
     day_of_travel = request.args.get("day_of_travel")
     hour_of_travel = request.args.get("hour_of_travel")
-    #print(start_station,destination_station,day_of_travel,hour_of_travel)
+    # print(start_station,destination_station,day_of_travel,hour_of_travel)
 
     # get backend data of the corresponding stations
     for i in range(len(u)):
@@ -37,21 +38,22 @@ def pred():
 
     # get weather forecast information according to the user's input
     day = pd.to_datetime(day_of_travel)
-    day = day.weekday()+1
+    day = day.weekday() + 1
     weather_info = []
     for i in range(len(v)):
         date = (v[i][0].split(" "))[0]
         hour = int(v[i][1])
 
         if int(hour_of_travel) == 23:
-            if(str(pd.to_datetime(day_of_travel)+datetime.timedelta(days=1)).split(" ")[0]==str(date)) and hour == 0:
+            if (str(pd.to_datetime(day_of_travel) + datetime.timedelta(days=1)).split(" ")[0] == str(
+                    date)) and hour == 0:
                 weather_info = v[i]
                 break
         elif str(date) == str(day_of_travel):
             if abs(int(hour_of_travel) - hour) <= 1.5:
                 weather_info = v[i]
                 break
-    if len(weather_info)==0:
+    if len(weather_info) == 0:
         weather_info = v[-1]
 
     temp = weather_info[2]
@@ -67,14 +69,14 @@ def pred():
     if start_banking == 'False':
         start_banking = 0
     else:
-        start_banking=1
+        start_banking = 1
 
     if end_banking == 'False':
         end_banking = 0
     else:
-        end_banking=1
+        end_banking = 1
 
-    if main_describe =="Clouds":
+    if main_describe == "Clouds":
         main_describe = 0
     elif main_describe == "Drizzle":
         main_describe = 1
@@ -83,9 +85,8 @@ def pred():
     else:
         main_describe = 3
 
-
     # get historical data to print the first and second charts
-    s,d = getHistoricalData(start_station_number,end_station_number,hour_of_travel)
+    s, d = getHistoricalData(start_station_number, end_station_number, hour_of_travel)
     x_axis = []
     y_axis_bike = []
     y_axis_stands = []
@@ -105,37 +106,39 @@ def pred():
     result_1 = ML.predict_available_bike(start_arr)
     result_2 = ML.predict_available_stands(end_arr)
     final = {
-             "bike_available": result_1
-             ,"stands_available": result_2
-            ,"x_axis":x_axis
-            ,"y_axis_bike":y_axis_bike
-            ,"y_axis_stands":y_axis_stands
-            ,"description": main_describe
+        "bike_available": result_1
+        , "stands_available": result_2
+        , "x_axis": x_axis
+        , "y_axis_bike": y_axis_bike
+        , "y_axis_stands": y_axis_stands
+        , "description": main_describe
     }
     return json.dumps(final)
 
-def getHistoricalData(start_station_number,destination_station_number,hour):
-        '''get historical data of the last seven days '''
 
-        db_connect = getConnection()
-        cur = db_connect.cursor()
+def getHistoricalData(start_station_number, destination_station_number, hour):
+    '''get historical data of the last seven days '''
 
-        forma = '%a %b %e %H:%i:%s %Y'
+    db_connect = getConnection()
+    cur = db_connect.cursor()
 
-        sql1 = 'SELECT * from Bike.bike_station where date_sub(curdate(),INTERVAL 7 DAY) <= DATE(STR_TO_DATE(Update_time, "%s")) and Station_number = "%s" and Hour(STR_TO_DATE(Update_time, "%s")) = "%s"and minute(STR_TO_DATE(Update_time, "%s"))=0;' % (
+    forma = '%a %b %e %H:%i:%s %Y'
+
+    sql1 = 'SELECT * from Bike.bike_station where date_sub(curdate(),INTERVAL 7 DAY) <= DATE(STR_TO_DATE(Update_time, "%s")) and Station_number = "%s" and Hour(STR_TO_DATE(Update_time, "%s")) = "%s"and minute(STR_TO_DATE(Update_time, "%s"))=0;' % (
         forma, start_station_number, forma, hour, forma)
 
-        sql2 = 'SELECT * from Bike.bike_station where date_sub(curdate(),INTERVAL 7 DAY) <= DATE(STR_TO_DATE(Update_time, "%s")) and Station_number = "%s" and Hour(STR_TO_DATE(Update_time, "%s")) = "%s"and minute(STR_TO_DATE(Update_time, "%s"))=0;' % (
-            forma, destination_station_number, forma, hour, forma)
-        cur.execute(sql1)
-        s = cur.fetchall()
-        cur.execute(sql2)
-        d = cur.fetchall()
-        db_connect.commit()
-        db_connect.close()
-        return s,d
+    sql2 = 'SELECT * from Bike.bike_station where date_sub(curdate(),INTERVAL 7 DAY) <= DATE(STR_TO_DATE(Update_time, "%s")) and Station_number = "%s" and Hour(STR_TO_DATE(Update_time, "%s")) = "%s"and minute(STR_TO_DATE(Update_time, "%s"))=0;' % (
+        forma, destination_station_number, forma, hour, forma)
+    cur.execute(sql1)
+    s = cur.fetchall()
+    cur.execute(sql2)
+    d = cur.fetchall()
+    db_connect.commit()
+    db_connect.close()
+    return s, d
 
-@pred_bp.route('/predict_all',methods=['POST','GET'])
+
+@pred_bp.route('/predict_all', methods=['POST', 'GET'])
 def predict_all():
     '''get hourly prediction data on the given date,
     basically just repeat the same prediction process 24 fimes'''
@@ -147,7 +150,7 @@ def predict_all():
     destination_station = request.args.get("destination_station")
     day_of_travel = request.args.get("day_of_travel")
     hour_of_travel = request.args.get("hour_of_travel")
-    print(start_station,destination_station,day_of_travel,hour_of_travel)
+    print(start_station, destination_station, day_of_travel, hour_of_travel)
     for i in range(len(u)):
         if start_station == u[i][2]:
             start_station_number = u[i][1]
@@ -158,9 +161,8 @@ def predict_all():
             end_banking = u[i][6]
             end_bike_stands = u[i][8]
 
-
     day = pd.to_datetime(day_of_travel)
-    day = day.weekday()+1
+    day = day.weekday() + 1
     weather_info = []
 
     result_1 = {}
@@ -172,14 +174,15 @@ def predict_all():
             hour = int(v[i][1])
 
             if int(hour_of_travel) == 23:
-                if(str(pd.to_datetime(day_of_travel)+datetime.timedelta(days=1)).split(" ")[0]==str(date)) and hour == 0:
+                if (str(pd.to_datetime(day_of_travel) + datetime.timedelta(days=1)).split(" ")[0] == str(
+                        date)) and hour == 0:
                     weather_info = v[i]
                     break
             elif str(date) == str(day_of_travel):
                 if abs(int(clock) - hour) <= 1.5:
-                    weather_info= v[i]
+                    weather_info = v[i]
                     break
-        if len(weather_info)==0:
+        if len(weather_info) == 0:
             weather_info = v[i]
 
         temp = weather_info[2]
@@ -194,14 +197,14 @@ def predict_all():
         if start_banking == 'False':
             start_banking = 0
         else:
-            start_banking=1
+            start_banking = 1
 
         if end_banking == 'False':
             end_banking = 0
         else:
-            end_banking=1
+            end_banking = 1
 
-        if main_describe =="Clouds":
+        if main_describe == "Clouds":
             main_describe = 0
         elif main_describe == "Drizzle":
             main_describe = 1
@@ -210,14 +213,18 @@ def predict_all():
         else:
             main_describe = 3
 
-        start_arr = [float(day), float(hour), float(start_station_number), float(start_bike_stands), float(start_banking), float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max), float(wind_speed), float(pressure), float(humidity)]
-        end_arr = [float(day), float(hour), float(end_station_number), float(end_bike_stands), float(end_banking), float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max), float(wind_speed), float(pressure), float(humidity)]
+        start_arr = [float(day), float(hour), float(start_station_number), float(start_bike_stands),
+                     float(start_banking), float(main_describe), float(temp), float(feels_like), float(temp_min),
+                     float(temp_max), float(wind_speed), float(pressure), float(humidity)]
+        end_arr = [float(day), float(hour), float(end_station_number), float(end_bike_stands), float(end_banking),
+                   float(main_describe), float(temp), float(feels_like), float(temp_min), float(temp_max),
+                   float(wind_speed), float(pressure), float(humidity)]
 
         result_1[clock] = ML.predict_available_bike(start_arr)
         result_2[clock] = ML.predict_available_stands(end_arr)
 
     final = {
-            "24hour_bikes":result_1
-            ,"24hour_stands":result_2
+        "24hour_bikes": result_1
+        , "24hour_stands": result_2
     }
     return json.dumps(final)

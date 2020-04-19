@@ -4,13 +4,17 @@ from db_connection import getConnection
 
 url = "https://api.openweathermap.org/data/2.5/forecast?q=Dublin&units=metric&appid=334edd463962a36bb945255752407871"
 
-def get_forecast(url="https://api.openweathermap.org/data/2.5/forecast?q=Dublin&units=metric&appid=334edd463962a36bb945255752407871"):
+
+def get_forecast(
+        url="https://api.openweathermap.org/data/2.5/forecast?q=Dublin&units=metric&appid=334edd463962a36bb945255752407871"):
     object = requests.get(url)
     data = object.text
     return json.loads(data)
 
+
 forecast_data = get_forecast()
 forecast_list = forecast_data['list']
+
 
 def clean_data():
     for i in range(len(forecast_list)):
@@ -27,7 +31,7 @@ def clean_data():
         forecast_list[i]['weather'][0].pop('icon')
         forecast_list[i]['wind'].pop('deg')
 
-        forecast_list[i]['windSpeed'] =  forecast_list[i]['wind']['speed']
+        forecast_list[i]['windSpeed'] = forecast_list[i]['wind']['speed']
         forecast_list[i].pop('wind')
 
         forecast_list[i]['Desc'] = forecast_list[i]['weather'][0]['main']
@@ -45,8 +49,7 @@ def clean_data():
         forecast_list[i].pop('main')
 
 
-def insert_date():
-
+def insert_data():
     connection = getConnection()
     cursor = connection.cursor()
     clean_data()
@@ -67,10 +70,12 @@ def insert_date():
         wind_speed = forecast_list[i]['windSpeed']
         main = forecast_list[i]['Desc']
 
-        sql = "insert into db1.forecast values ('%s','%s', '%s','%s','%s','%s', '%s', '%s', '%s', '%s');" % (date, hour, temp, feels_like, temp_min,temp_max, pressure, humidity, wind_speed, main)
+        sql = "insert into db1.forecast values ('%s','%s', '%s','%s','%s','%s', '%s', '%s', '%s', '%s');" % (
+            date, hour, temp, feels_like, temp_min, temp_max, pressure, humidity, wind_speed, main)
         cursor.execute(sql)
 
     connection.commit()
     connection.close()
 
-insert_date()
+
+insert_data()

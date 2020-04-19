@@ -1,0 +1,10 @@
+# dist macros
+     
+%amzn               1
+%dist          .amzn1
+%amzn1             1
+
+%distribution Amazon Linux AMI
+
+%_without_X11       1
+%_without_gcj_support 1

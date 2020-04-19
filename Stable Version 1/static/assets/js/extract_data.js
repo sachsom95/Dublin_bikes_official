@@ -15,9 +15,24 @@ function updatestation(station_number) {
             document.getElementById("station").innerHTML = result['station'];
             document.getElementById("status").innerHTML = result['status'];
             document.getElementById("stands").innerHTML = result['stands_available'];
+            document.getElementById("weather_icon").src = "http://openweathermap.org/img/wn/" + result['icon'] + "@2x.png";
         }
     });
 }// updatestation
+
+/*
+get station Id by station name
+ */
+function getStationId(stationName) {
+    var stationId;
+    for (var i = 0; i < stations.length; i++) {
+        if (stations[i].name === stationName) {
+            stationId = stations[i].number;
+            return stationId;
+        }
+    }
+    return stationId;
+}
 
 
 /**
@@ -75,12 +90,6 @@ function get_data() {
 
     /* loader */
     loader_generate();
-
-    /*
-    save the direction that the user set last time
-     */
-    var last_direction = {start: start_station, end: destination_station};
-    localStorage.setItem("last_direction", JSON.stringify(last_direction));
 
     /*
          request for daily prediction data
@@ -203,22 +212,33 @@ function get_data() {
         $(".chart_container").css('display', 'block')
     }, 3000);
 
-
-    /* find two markers' number*/
-    var startMarkerId;
-    var endMarkerId;
-    for (var i = 0; i < stations.length; i++) {
-        if (stations[i].name === start_station) {
-            startMarkerId = stations[i].number;
-        }
-        if (stations[i].name === destination_station) {
-            endMarkerId = stations[i].number;
-        }
+    /*resume last direction Icon */
+    var directionObject = JSON.parse(localStorage.getItem("last_direction"));
+    if (directionObject != null) {
+        var lastStartName = directionObject.start;
+        var lastEndName = directionObject.end;
+        var lastStartId = getStationId(lastStartName);
+        var lastEndId = getStationId(lastEndName);
+        resumeIcon(lastStartId);
+        resumeIcon(lastEndId);
     }
 
-    /* distance and carbon emission data computation */
+    /* find two new number and set Icon*/
+    var startMarkerId = getStationId(start_station);
+    var endMarkerId = getStationId(destination_station);
+
     var startMarker = findTargetMarker(startMarkerId);
     var endMarker = findTargetMarker(endMarkerId);
+    startMarker.marker.setIcon("http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png");
+    endMarker.marker.setIcon("http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png");
+
+    /*
+    save the direction that the user set last time
+     */
+    var last_direction = {start: start_station, end: destination_station};
+    localStorage.setItem("last_direction", JSON.stringify(last_direction));
+
+    /* distance and carbon emission data computation */
     var startMarkerPostion = new google.maps.LatLng({
         lat: startMarker.marker.getPosition().lat(),
         lng: startMarker.marker.getPosition().lng()

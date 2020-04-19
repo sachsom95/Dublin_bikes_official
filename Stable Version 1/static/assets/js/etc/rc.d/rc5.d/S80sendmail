@@ -1,0 +1,164 @@
+#!/bin/bash
+#
+# sendmail      This shell script takes care of starting and stopping
+#               sendmail.
+#
+# chkconfig: 2345 80 30
+# description: Sendmail is a Mail Transport Agent, which is the program \
+#              that moves mail from one machine to another.
+# processname: sendmail
+# config: /etc/mail/sendmail.cf
+# pidfile: /var/run/sendmail.pid
+
+### BEGIN INIT INFO
+# Provides: sendmail MTA smtpdaemon
+# Required-Start: $local_fs $network
+# Required-Stop: $local_fs $network
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: start and stop sendmail
+# Description: sendmail is a Mail Transport Agent (MTA)
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+[ -f /etc/sysconfig/network ] && . /etc/sysconfig/network
+
+# Source sendmail configureation.
+if [ -f /etc/sysconfig/sendmail ]; then
+    . /etc/sysconfig/sendmail
+else
+    DAEMON=no
+    QUEUE=1h
+fi
+[ -z "$SMQUEUE" ] && SMQUEUE="$QUEUE"
+[ -z "$SMQUEUE" ] && SMQUEUE=1h
+
+# Check that we're a privileged user
+[ `id -u` = 0 ] || exit 4
+
+# Check that networking is up.
+[ "${NETWORKING}" = "no" ] && exit 1
+
+[ -x /usr/sbin/sendmail ] || exit 5
+
+prog="sendmail"
+
+updateconf() {
+    /etc/mail/make > /dev/null 2>&1
+    if [ $? -eq 15 ]; then
+	echo -n $"Package sendmail-cf is required to update configuration."
+	warning
+	echo
+    fi
+    /etc/mail/make aliases > /dev/null 2>&1
+}
+
+start() {
+    # Start daemons.
+    ret=0
+    updateconf
+    echo -n $"Starting $prog: "
+    daemon /usr/sbin/sendmail $([ "x$DAEMON" = xyes ] && echo -bd) \
+	$([ -n "$QUEUE" ] && echo -q$QUEUE) $SENDMAIL_OPTARG
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch /var/lock/subsys/sendmail
+    let ret+=$RETVAL
+
+    if [ ! -f /var/run/sm-client.pid ]; then
+	echo -n $"Starting sm-client: "
+	touch /var/run/sm-client.pid
+	chown smmsp:smmsp /var/run/sm-client.pid
+	if [ -x /usr/sbin/selinuxenabled ] && /usr/sbin/selinuxenabled; then
+	    /sbin/restorecon /var/run/sm-client.pid
+	fi
+	daemon --check sm-client /usr/sbin/sendmail -L sm-msp-queue -Ac \
+	    -q$SMQUEUE $SENDMAIL_OPTARG
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ] && touch /var/lock/subsys/sm-client
+	let ret+=$RETVAL
+    fi
+
+    [ $ret -eq 0 ] && return 0 || return 1
+}
+
+reload() {
+    updateconf
+    echo -n $"Reloading $prog: "
+    killproc sendmail -HUP
+    RETVAL=$?
+    echo
+    if [ $RETVAL -eq 0 -a -f /var/run/sm-client.pid ]; then
+        echo -n $"reloading sm-client: "
+	killproc sm-client -HUP
+	RETVAL=$?
+	echo
+    fi
+    return $RETVAL
+}
+
+stop() {
+    # Stop daemons.
+    if [ -f /var/run/sm-client.pid ]; then
+	echo -n $"Shutting down sm-client: "
+	killproc sm-client
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ] && rm -f /var/run/sm-client.pid
+	[ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/sm-client
+    fi
+    echo -n $"Shutting down $prog: "
+    killproc sendmail
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/sendmail
+    return $RETVAL
+}
+
+status -p /var/run/sendmail.pid >/dev/null || status -p /var/run/sm-client.pid >/dev/null
+running=$?
+
+# See how we were called.
+case "$1" in
+    start)
+	[ $running -eq 0 ] && exit 0
+	start
+	RETVAL=$?
+	;;
+    stop)
+	[ $running -eq 0 ] || exit 0
+	stop
+	RETVAL=$?
+	;;
+    reload)
+	[ $running -eq 0 ] || exit 7
+	reload
+	RETVAL=$?
+	;;
+    restart|force-reload)
+	stop
+	start
+	RETVAL=$?
+	;;
+    condrestart|try-restart)
+	[ $running -eq 0 ] || exit 0
+	stop
+	start
+	RETVAL=$?
+	;;
+    status)
+	echo -n sendmail; status -p /var/run/sendmail.pid -l sendmail
+	RETVAL=$?
+	echo -n sm-client; status -p /var/run/sm-client.pid -l sm-client
+	[ $RETVAL -eq 0 ] && RETVAL=$?
+	;;
+    *)
+	echo $"Usage: $0 {start|stop|restart|condrestart|status}"
+	RETVAL=2
+esac
+
+exit $RETVAL

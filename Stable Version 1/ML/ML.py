@@ -22,15 +22,14 @@ def save_models():
     Xtrain, Xtest, Ytrain, Ytest = train_test_split(train, target, test_size=0.3)
 
     # split training and testing dataset for target 2
-    Xtrain2,Xtest2,Ytrain2,Ytest2 = train_test_split(train,integrated[target_feature2],test_size=0.3)
+    Xtrain2, Xtest2, Ytrain2, Ytest2 = train_test_split(train, integrated[target_feature2], test_size=0.3)
     # model for available bikes : rfc_1
     rfc_1 = RandomForestRegressor(n_estimators=10
-                                , random_state=0
-                                , max_depth=28
-                                , max_features=11
-                                )
+                                  , random_state=0
+                                  , max_depth=28
+                                  , max_features=11
+                                  )
     rfc_1 = rfc_1.fit(Xtrain, Ytrain.Available_bikes)
-
 
     # model for available stands : rfc_2
     rfc_2 = RandomForestRegressor(
@@ -46,6 +45,7 @@ def save_models():
 
     return True
 
+
 def predict_available_bike(arr):
     # arr is a list like : ["Day", "Hour", "Station_number", 'Bike_stands', 'Banking', 'Bonus', 'main', 'temp',
     #                       'feels_like', 'temp_min', 'temp_max', 'wind_speed', 'pressure', 'humidity']
@@ -57,11 +57,12 @@ def predict_available_bike(arr):
     available_bike = rfc_1.predict(train_data)
 
     # threshold float to integers
-    if available_bike-int(available_bike)>0.5:
-        available_bike = int(available_bike)+1
+    if available_bike - int(available_bike) > 0.5:
+        available_bike = int(available_bike) + 1
     else:
-        available_bike=int(available_bike)
+        available_bike = int(available_bike)
     return available_bike
+
 
 def predict_available_stands(arr):
     train_data = []
@@ -70,15 +71,12 @@ def predict_available_stands(arr):
     rfc_2 = load('ML/avai_station.joblib')
     available_stands = rfc_2.predict(train_data)
     # threshold float to integers
-    if available_stands-int(available_stands)>0.5:
-        available_stands = int(available_stands)+1
+    if available_stands - int(available_stands) > 0.5:
+        available_stands = int(available_stands) + 1
     else:
-        available_stands=int(available_stands)
+        available_stands = int(available_stands)
     return available_stands
 
 # print(save_models())
 # arr = [3,1,64,40,1,0,0,5.9,1.88,5.56,6.11,4.1,1020,93]
 # print("Available bike: ",predict_available_bike(arr)[0],"Available stands: ",predict_available_bike(arr)[1])
-
-
-
