@@ -1,0 +1,4 @@
+# List of NTP servers used by the ntpdate service.
+
+169.254.169.123
+0.amazon.pool.ntp.org

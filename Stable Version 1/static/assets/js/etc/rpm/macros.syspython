@@ -1,0 +1,35 @@
+%_sys_python_major 2
+%_sys_python_minor 7
+%_sys_python_version %{_sys_python_major}.%{_sys_python_minor}
+%_sys_python python%{_sys_python_version}
+
+%__sys_python %{_bindir}/%{_sys_python}
+%_sys_python_sitelib %(%{__sys_python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+%sys_python_sitelib %{_sys_python_sitelib}
+%_sys_python_sitearch %(%{__sys_python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(plat_specific=True))")
+%sys_python_sitearch %{_sys_python_sitearch}
+
+%sys_python_version  %{_sys_python_version}
+%_sys_python_abi     %{_sys_python_version}
+%_sys_python_basever %{_sys_python_major}%{_sys_python_minor}
+%sys_python_pkg python%{_sys_python_basever}
+
+%__sys_python_shebang sed -i -r -e '1s,^#![[:space:]]*/(usr/)?(local/)?bin/(env )?python($|[[:space:]]),#!'%{__sys_python}'\\4,'
+
+%__sys_python_shebang_path()\
+%{?!1:echo "No path provided for %%__sys_python_shebang_path.";exit 1}\
+shebang_path="%1"\
+find $shebang_path -type f -print -exec %{__sys_python_shebang} "{}" \\+ || :\
+%{nil}
+
+%_sys_python_bytecompile_script 'import py_compile, sys; [py_compile.compile(f, dfile=f.partition("$RPM_BUILD_ROOT")[2]) for f in sys.argv[1:]]'
+%__sys_python_bytecompile_pyc %{__sys_python} -c %{_sys_python_bytecompile_script}
+%__sys_python_bytecompile_pyo %{__sys_python} -O -c %{_sys_python_bytecompile_script}
+
+%__sys_python_bytecompile_path()\
+%{?!1:echo "No path provided for %%__sys_python_byte_compile_path.";exit 1}\
+bytecode_compilation_path="%1"\
+find $bytecode_compilation_path -type f -name "*.py" -print -exec %{__sys_python_bytecompile_pyc} "{}" \\+ || :\
+\
+find $bytecode_compilation_path -type f -name "*.py" -print -exec %{__sys_python_bytecompile_pyo} "{}" \\+ || :\
+%{nil}

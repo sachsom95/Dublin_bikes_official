@@ -1,0 +1,14 @@
+[amzn-nosrc]
+name=amzn-nosrc-Base
+mirrorlist=http://repo.$awsregion.$awsdomain/$releasever/nosrc/mirror.list
+mirrorlist_expire=300
+metadata_expire=300
+priority=10
+failovermethod=priority
+fastestmirror_enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-ga
+enabled=0
+retries=3
+timeout=5
+report_instanceid=yes

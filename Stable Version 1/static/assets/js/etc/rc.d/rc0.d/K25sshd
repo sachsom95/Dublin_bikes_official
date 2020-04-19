@@ -1,0 +1,200 @@
+#!/bin/bash
+#
+# sshd		Start up the OpenSSH server daemon
+#
+# chkconfig: 2345 55 25
+# description: SSH is a protocol for secure remote shell access. \
+#              This service starts up the OpenSSH server daemon.
+#
+# processname: sshd
+# config: /etc/ssh/ssh_host_key
+# config: /etc/ssh/ssh_host_key.pub
+# config: /etc/ssh/ssh_random_seed
+# config: /etc/ssh/sshd_config
+# pidfile: /var/run/sshd.pid
+
+### BEGIN INIT INFO
+# Provides: sshd
+# Required-Start: $local_fs $network $syslog
+# Required-Stop: $local_fs $syslog
+# Should-Start: $syslog
+# Should-Stop: $network $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start up the OpenSSH server daemon
+# Description:       SSH is a protocol for secure remote shell access.
+#		     This service starts up the OpenSSH server daemon.
+### END INIT INFO
+
+# source function library
+. /etc/rc.d/init.d/functions
+
+# pull in sysconfig settings
+[ -f /etc/sysconfig/sshd ] && . /etc/sysconfig/sshd
+
+RETVAL=0
+prog="sshd"
+lockfile=/var/lock/subsys/$prog
+
+# Some functions to make the below more readable
+SSHD=/usr/sbin/sshd
+PID_FILE=/var/run/sshd.pid
+
+runlevel=$(set -- $(runlevel); eval "echo \$$#" )
+
+# Amazon Linux kernels 3.10.34-37.137 and 3.10.34-38.137 had a bad setting for
+# AUDIT_LOGINUID_IMMUTABLE which would make sshd unable to respawn after a
+# restart if the pam_loginuid.so module is enabled this tests for the broken
+# kernel and toggles the use of pam_loginuid.so
+handle_pam_broken_kernel()
+{
+    if [ -f /etc/pam.d/sshd ] ; then
+        if [[ "$(uname -r)" =~ 3\.10\.34-3[78]\.137\.amzn1 ]] ; then
+            # problematic kernel, disable pam_loginuid.so
+            sed -r -i -e 's/^(session.*pam_loginuid.*$)/##sshd_autodisabled##\1/' /etc/pam.d/sshd
+        else
+            # should be a valid kernel, undo auto-disablement
+            sed -r -i -e 's/^##sshd_autodisabled##//' /etc/pam.d/sshd
+        fi
+    fi
+}
+
+do_restart_sanity_check()
+{
+	$SSHD -t
+	RETVAL=$?
+	if [ $RETVAL -ne  0 ]; then
+		failure $"Configuration file or keys are invalid"
+		echo
+	fi
+}
+
+start()
+{
+	[ -x $SSHD ] || exit 5
+	[ -f /etc/ssh/sshd_config ] || exit 6
+	# Create keys if necessary
+	/usr/sbin/sshd-keygen
+
+        # workaround a broken kernel build
+        handle_pam_broken_kernel
+
+	echo -n $"Starting $prog: "
+	$SSHD $OPTIONS && success || failure
+	RETVAL=$?
+	[ $RETVAL -eq 0 ] && touch $lockfile
+	echo
+	return $RETVAL
+}
+
+stop()
+{
+	if [ ! -f "$PID_FILE" ]; then
+		# not running; per LSB standards this is "ok"
+		action $"Stopping $prog: " /bin/true
+		return 0
+	fi
+	PID=`cat "$PID_FILE"`
+	if [ -n "$PID" ]; then
+		/bin/kill "$PID" >/dev/null 2>&1
+		RETVAL=$?
+		if [ $RETVAL -ne 0 ]; then
+			RETVAL=1
+			action $"Stopping $prog: " /bin/false
+		else
+			action $"Stopping $prog: " /bin/true
+		fi
+	else
+		 # failed to read pidfile
+		action $"Stopping $prog: " /bin/false
+		RETVAL=4
+	fi
+	# if we are in halt or reboot runlevel kill all running sessions
+	# so the TCP connections are closed cleanly
+	if [ "x$runlevel" = x0 -o "x$runlevel" = x6 ] ; then
+	    trap '' TERM
+	    killall $prog 2>/dev/null
+	    trap TERM
+	fi
+	[ $RETVAL -eq 0 ] && rm -f $lockfile
+	rm -f "$PID_FILE"
+        return $RETVAL
+}
+
+reload()
+{
+	echo -n $"Reloading $prog: "
+	if [ -n "`pidfileofproc $SSHD`" ] ; then
+	    killproc $SSHD -HUP
+	else
+	    failure $"Reloading $prog"
+	fi
+	RETVAL=$?
+	echo
+}
+
+restart() {
+	stop
+	start
+}
+
+force_reload() {
+	restart
+}
+
+rh_status() {
+	status -p $PID_FILE openssh-daemon
+}
+
+rh_status_q() {
+	rh_status >/dev/null 2>&1
+}
+
+case "$1" in
+	start)
+		rh_status_q && exit 0
+		start
+		;;
+	stop)
+		if ! rh_status_q; then
+			rm -f $lockfile
+			exit 0
+		fi
+		stop
+		;;
+	restart)
+		restart
+		;;
+	reload)
+		rh_status_q || exit 7
+		reload
+		;;
+	force-reload)
+		force_reload
+		;;
+	condrestart|try-restart)
+		rh_status_q || exit 0
+		if [ -f $lockfile ] ; then
+			do_restart_sanity_check
+			if [ $RETVAL -eq 0 ] ; then
+				stop
+				# avoid race
+				sleep 3
+				start
+			else
+				RETVAL=6
+			fi
+		fi
+		;;
+	status)
+		rh_status
+		RETVAL=$?
+		if [ $RETVAL -eq 3 -a -f $lockfile ] ; then
+			RETVAL=2
+		fi
+		;;
+	*)
+		echo $"Usage: $0 {start|stop|restart|reload|force-reload|condrestart|try-restart|status}"
+		RETVAL=2
+esac
+exit $RETVAL

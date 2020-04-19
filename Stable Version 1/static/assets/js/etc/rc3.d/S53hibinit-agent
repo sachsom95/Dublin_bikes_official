@@ -1,0 +1,93 @@
+#!/bin/bash
+#
+# hibinit-agent
+# chkconfig:	2345 26 90
+# description:  EC2 instance hibernation setup agent
+# processname: hibinit-agent
+# config:	/etc/hibinit-config.cfg
+
+### BEGIN INIT INFO
+# Provides:          hibinit-agent
+# Required-Start:    $all cloud-config
+# Should-Start:      $time
+# Required-Stop:	
+# Should-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: EC2 instance hibernation setup agent
+# Description:       EC2 instance hibernation setup agent 
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# pull in sysconfig settings
+[ -f /etc/sysconfig/hibinit-agent ] && . /etc/sysconfig/hibinit-agent
+
+RETVAL=0
+
+prog="hibinit-agent"
+hibinit="/usr/bin/hibinit-agent"
+conf="/etc/hibinit-config.cfg"
+
+start() {
+    [ -x $hibinit ] || return 5
+    [ -f $conf ] || return 6
+
+    echo -n $"Starting $prog: "
+    $hibinit -c $conf && success || failure
+    RETVAL=$?
+#Restarting ACPID agent to listem on sleep signal after the installation of sleep action/event scripts
+    echo -n $"Restarting acpid.. "
+    /sbin/service acpid restart
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Shutting down $prog: "
+    # No-op
+    RETVAL=7
+    return $RETVAL
+}
+
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+    start)
+        start
+        RETVAL=$?
+        ;;
+    stop)
+        stop
+        RETVAL=$?
+        ;;
+    restart|try-restart|condrestart)
+        ## Stop the service and regardless of whether it was
+        ## running or not, start it again.
+        # 
+        ## Note: try-restart is now part of LSB (as of 1.9).
+        ## RH has a similar command named condrestart.
+        restart
+        RETVAL=$?
+        ;;
+	status)
+        echo -n $"Checking for service $prog:"
+        # Return value is slightly different for the status command:
+        # 0 - service up and running
+        # 1 - service dead, but /var/run/  pid  file exists
+        # 2 - service dead, but /var/lock/ lock file exists
+        # 3 - service not running (unused)
+        # 4 - service status unknown :-(
+        # 5--199 reserved (5--99 LSB, 100--149 distro, 150--199 appl.)
+	RETVAL=3
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status|try-restart|condrestart|restart}"
+        RETVAL=3
+        ;;
+esac
+
+exit $RETVAL	
