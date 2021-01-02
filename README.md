@@ -9,8 +9,8 @@ Use Dublin bikes report for full information.
 
 
 # Dublin Bikes Project
-NOTE : FOR OUR STANDUP MEETS AND LOGS SEE WIKI
-[Wiki!!](https://github.com/sachsom95/Dublin_bus_official/wiki)
+NOTE : FOR OUR STANDUP MEETS AND LOGS SEE
+[Wiki!!](https://github.com/sachsom95/Dublin_bikes_official/wiki)
 <br>
 
 ### This is Dublin Bikes a webapp for our DBbikes system. 
@@ -35,5 +35,5 @@ Someone say cookies, and sparkles?
 
 
 ### Team
-Project possible to amazing work of @FreddieNiu and @ LiuHabao
+Project possible due to amazing work of @FreddieNiu and @ LiuHabao....they cool
 
